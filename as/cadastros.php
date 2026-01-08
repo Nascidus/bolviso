@@ -1,4 +1,14 @@
-﻿
+<?php
+session_start();
+if((!isset($_SESSION['login']))
+AND (!isset($_SESSION['senha']))) {
+    header("Location: /as/index.php?erro=logar");
+    exit();
+}
+$login = $_SESSION['login'];
+$senha = $_SESSION['senha'];  
+include'conecta.php';
+?>
 <!doctype html>
 <html>
 <head>
@@ -22,10 +32,18 @@
 	
 
 <?php
-$sql = "SELECT * FROM newsletter ORDER BY id DESC";
-$comando = mysqli_query($conn, $sql);
-$linhas = mysqli_num_rows($comando); 
-echo"<div class=\"alinha14\">CADASTROS ($linhas)</div>";?> 
+if ($conn) {
+    $sql = "SELECT * FROM newsletter ORDER BY id DESC";
+    $comando = mysqli_query($conn, $sql);
+    if ($comando) {
+        $linhas = mysqli_num_rows($comando); 
+        echo"<div class=\"alinha14\">CADASTROS ($linhas)</div>";
+    } else {
+        echo"<div class=\"alinha14\">CADASTROS (0)</div>";
+    }
+} else {
+    echo"<div class=\"alinha14\">CADASTROS - Erro de conexão</div>";
+}?> 
 	
 
 </div></div>
@@ -42,20 +60,27 @@ echo"<div class=\"alinha14\">CADASTROS ($linhas)</div>";?>
 <div id="painel-cliente">	
 	
 <?php
+if ($conn) {
+    $i = 0; // Inicializa o contador
+    $sql = "SELECT * FROM newsletter ORDER BY id DESC";
+    $comando = mysqli_query($conn, $sql);
+    if ($comando) {
+        while($res = mysqli_fetch_assoc($comando)){
+            $i++;
+            
+            $id = $res['id'] ?? '';
+            $data_cadastro = $res['data_cadastro'] ?? '';
+            $email = $res['email'] ?? '';	
+            $nome = $res['nome'] ?? '';
+            $telefone = $res['telefone'] ?? '';
 
-$sql = "SELECT * FROM newsletter GROUP BY email ORDER BY id DESC";
-$comando = mysqli_query($conn, $sql);
-while($res = mysqli_fetch_assoc($comando)){
-
-$id = $res ['id'];
-$data_cadastro = $res ['data_cadastro'];
-$email = $res ['email'];	
-$nome = $res ['nome'];
-$telefone = $res ['telefone'];
-
-$i++;
-
-echo "		
+            // Garante que as variáveis não sejam vazias para exibição
+            $nome = !empty($nome) ? $nome : '-';
+            $telefone = !empty($telefone) ? $telefone : '-';
+            $email = !empty($email) ? $email : '-';
+            $data_cadastro = !empty($data_cadastro) ? $data_cadastro : '-';
+            
+            echo "		
 
 <div id=\"painel-banner-listagem\">
 <div class=\"painel-banner-text\">$i</div>
@@ -66,7 +91,7 @@ echo "
 
 <div id=\"grid12F\"><div id=\"painel-banner-listagemIcon-center\">
 
-<div class=\"painel-banner-listagem-icon\"><a href='cadastros?acao=remove&id=$id' onclick=\"return confirm('Certeza que deseja excluir?');\"><img src=\"img/excluir2.png\"/></a></div>
+<div class=\"painel-banner-listagem-icon\"><a href='/as/cadastros.php?acao=remove&id=$id' onclick=\"return confirm('Certeza que deseja excluir?');\"><img src=\"img/excluir2.png\"/></a></div>
 
 </div></div>
 
@@ -75,14 +100,17 @@ echo "
 
 
 
-"; }?>
-	
+"; 
+        } // fecha while
+    } // fecha if comando
+} // fecha if conn
+?>
 
 </div></div>
 
 <div id="sistemas-menu-lateral">
 <div id="grid12"><div class="sistemas-marcador"><img src="img/marcador.png"/></div></div>
-	<?php  include'menu-lateral.php';?>
+	<?php include'menu-lateral.php';?>
 </div></div></div>
 
 <?php  include'menu-lateral-mobiles.php';?>
@@ -90,15 +118,16 @@ echo "
 	
 	
 <?php
-$acao = $_GET['acao'];
-$id = $_GET['id'];
-if ($acao == 'remove'){
-$sql = "DELETE FROM `newsletter` WHERE id = $id";
-$comando = mysqli_query($conn, $sql);;
-
-if ($conn->query($sql) === TRUE) {
-echo "<script language='javascript'>function alerta(){alert('Removido com sucesso!'); }alerta();document.location='javascript:history.go(-1)';</script>";
-}}?>
+if ($conn) {
+    $acao = $_GET['acao'] ?? '';
+    $id = $_GET['id'] ?? 0;
+    if ($acao == 'remove' && $id > 0){
+        $sql = "DELETE FROM `newsletter` WHERE id = $id";
+        if ($conn->query($sql) === TRUE) {
+            echo "<script language='javascript'>function alerta(){alert('Removido com sucesso!'); }alerta();document.location='/as/cadastros.php';</script>";
+        }
+    }
+}?>
 
 
 </body>
