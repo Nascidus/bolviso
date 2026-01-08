@@ -1,0 +1,143 @@
+[23-Mar-2023 14:58:16 America/Fortaleza] PHP Warning:  Undefined array key "logout" in /home1/clinicabelviso/public_html/as/as-adm/index.php on line 32
+[23-Mar-2023 14:58:19 America/Fortaleza] PHP Warning:  Undefined array key "login" in /home1/clinicabelviso/public_html/as/as-adm/sistema.php on line 12
+[23-Mar-2023 14:58:19 America/Fortaleza] PHP Warning:  Undefined array key "senha" in /home1/clinicabelviso/public_html/as/as-adm/sistema.php on line 13
+[23-Mar-2023 14:58:22 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 35
+[23-Mar-2023 14:58:22 America/Fortaleza] PHP Warning:  Undefined array key "downloads" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 127
+[23-Mar-2023 14:58:22 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 128
+[23-Mar-2023 14:58:22 America/Fortaleza] PHP Warning:  Undefined variable $onde_econtrar in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 383
+[23-Mar-2023 14:58:22 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 493
+[23-Mar-2023 14:58:22 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 493
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 35
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "downloads" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 127
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 128
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined variable $onde_econtrar in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 383
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 493
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "cadastros" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 508
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "cursos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 524
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "equipe_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 527
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "obras_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 530
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "filiais_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 533
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "exames_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 536
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "projetos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 539
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "tratamentos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 542
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "perguntas_e_respostas_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 545
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "onde_encontrar_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 548
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "acompanhamento_obra_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 551
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 554
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 565
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Warning:  Undefined variable $vagas in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 601
+[23-Mar-2023 14:58:37 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'downloads' in 'field list' in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php:606
+Stack trace:
+#0 /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php(606): mysqli->query('\nUPDATE  `paine...')
+#1 {main}
+  thrown in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 606
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 35
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "downloads" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 127
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 128
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined variable $onde_econtrar in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 383
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 493
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "cadastros" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 508
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "cursos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 524
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "equipe_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 527
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "obras_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 530
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "filiais_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 533
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "exames_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 536
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "projetos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 539
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "tratamentos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 542
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "perguntas_e_respostas_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 545
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "onde_encontrar_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 548
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "acompanhamento_obra_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 551
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 554
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 565
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Warning:  Undefined variable $vagas in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 601
+[23-Mar-2023 14:58:40 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'downloads' in 'field list' in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php:606
+Stack trace:
+#0 /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php(606): mysqli->query('\nUPDATE  `paine...')
+#1 {main}
+  thrown in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 606
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 35
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "downloads" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 127
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 128
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined variable $onde_econtrar in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 383
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 493
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "cadastros" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 508
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "cursos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 524
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "equipe_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 527
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "obras_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 530
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "filiais_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 533
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "exames_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 536
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "projetos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 539
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "tratamentos_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 542
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "perguntas_e_respostas_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 545
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "onde_encontrar_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 548
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "acompanhamento_obra_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 551
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 554
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 565
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Warning:  Undefined variable $vagas in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 601
+[23-Mar-2023 14:58:43 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'downloads' in 'field list' in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php:606
+Stack trace:
+#0 /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php(606): mysqli->query('\nUPDATE  `paine...')
+#1 {main}
+  thrown in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 606
+[23-Mar-2023 15:01:02 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php on line 73
+[23-Mar-2023 15:01:02 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php on line 227
+[23-Mar-2023 15:01:02 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php on line 228
+[23-Mar-2023 15:01:09 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'id' cannot be null in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php:90
+Stack trace:
+#0 /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php(90): mysqli->query('INSERT INTO `im...')
+#1 {main}
+  thrown in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php on line 90
+[25-Apr-2023 09:00:29 America/Fortaleza] PHP Warning:  Undefined array key "erro" in /home1/clinicabelviso/public_html/as/as-adm/index.php on line 27
+[25-Apr-2023 09:00:31 America/Fortaleza] PHP Warning:  Undefined array key "login" in /home1/clinicabelviso/public_html/as/as-adm/sistema.php on line 12
+[25-Apr-2023 09:00:31 America/Fortaleza] PHP Warning:  Undefined array key "senha" in /home1/clinicabelviso/public_html/as/as-adm/sistema.php on line 13
+[25-Apr-2023 09:00:34 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 103
+[25-Apr-2023 09:00:34 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 130
+[25-Apr-2023 09:00:34 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 131
+[25-Apr-2023 09:01:17 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 105
+[25-Apr-2023 09:01:17 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'id' cannot be null in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php:116
+Stack trace:
+#0 /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php(116): mysqli->query('\nINSERT INTO `u...')
+#1 {main}
+  thrown in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 116
+[25-Apr-2023 09:01:21 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 105
+[25-Apr-2023 09:01:21 America/Fortaleza] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'id' cannot be null in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php:116
+Stack trace:
+#0 /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php(116): mysqli->query('\nINSERT INTO `u...')
+#1 {main}
+  thrown in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 116
+[25-Apr-2023 09:01:23 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso-editar.php on line 89
+[25-Apr-2023 09:01:30 America/Fortaleza] PHP Warning:  Undefined array key "data_cadastro" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso-editar.php on line 93
+[25-Apr-2023 09:01:32 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 103
+[25-Apr-2023 09:01:32 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 130
+[25-Apr-2023 09:01:32 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 131
+[25-Apr-2023 09:01:33 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso-editar.php on line 89
+[25-Apr-2023 09:01:40 America/Fortaleza] PHP Warning:  Undefined array key "data_cadastro" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso-editar.php on line 93
+[25-Apr-2023 09:01:41 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 103
+[25-Apr-2023 09:01:41 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 130
+[25-Apr-2023 09:01:41 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 131
+[17-May-2023 10:46:49 America/Fortaleza] PHP Warning:  Undefined array key "erro" in /home1/clinicabelviso/public_html/as/as-adm/index.php on line 27
+[17-May-2023 10:47:19 America/Fortaleza] PHP Warning:  Undefined array key "login" in /home1/clinicabelviso/public_html/as/as-adm/sistema.php on line 12
+[17-May-2023 10:47:19 America/Fortaleza] PHP Warning:  Undefined array key "senha" in /home1/clinicabelviso/public_html/as/as-adm/sistema.php on line 13
+[17-May-2023 10:47:28 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 103
+[17-May-2023 10:47:28 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 130
+[17-May-2023 10:47:28 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 131
+[17-May-2023 10:47:34 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 103
+[17-May-2023 10:47:34 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 130
+[17-May-2023 10:47:34 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 131
+[17-May-2023 10:47:39 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 35
+[17-May-2023 10:47:39 America/Fortaleza] PHP Warning:  Undefined array key "downloads" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 127
+[17-May-2023 10:47:39 America/Fortaleza] PHP Warning:  Undefined array key "downloads_n" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 128
+[17-May-2023 10:47:39 America/Fortaleza] PHP Warning:  Undefined variable $onde_econtrar in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 383
+[17-May-2023 10:47:39 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 493
+[17-May-2023 10:47:39 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/ferramentas-painel.php on line 493
+[17-May-2023 10:47:47 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 103
+[17-May-2023 10:47:47 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 130
+[17-May-2023 10:47:47 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 131
+[17-May-2023 10:47:49 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php on line 73
+[17-May-2023 10:47:49 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php on line 227
+[17-May-2023 10:47:49 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/imagens-fixas.php on line 228
+[17-May-2023 10:47:55 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 103
+[17-May-2023 10:47:55 America/Fortaleza] PHP Warning:  Undefined array key "acao" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 130
+[17-May-2023 10:47:55 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home1/clinicabelviso/public_html/as/as-adm/dados-de-acesso.php on line 131
+[17-May-2023 10:48:34 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/clinicabelviso/public_html/as/as-adm/index.php:2) in /home1/clinicabelviso/public_html/as/as-adm/index.php on line 35
+[17-May-2023 10:48:34 America/Fortaleza] PHP Warning:  Undefined array key "login" in /home1/clinicabelviso/public_html/as/as-adm/index.php on line 37

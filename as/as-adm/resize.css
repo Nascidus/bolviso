@@ -1,0 +1,140 @@
+/*----------------------------------------------------------
+Configurações Gerais <<<<<==================================
+----------------------------------------------------------*/
+
+.center{
+	margin: 0 auto;
+	max-width:1270px; /*largura máxima do layout*/
+	width: 95%; /*ajuste do layout à tela*/
+}
+/*.clearfix usado para adicionar um espaço vazio antes e depois dos elementos
+  evitando que os floats se aglomerem.
+*/
+.clearfix:before, .clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+/*fim do clearfix*/
+
+img, picture, video, embed {max-width: 100%; /*define a largura máxima em até 100%*/}
+
+/*----------------------------------------------------------
+Seção HEADER - Topo do Site <<<<<===========================
+----------------------------------------------------------*/
+
+.corpo{
+	border-bottom: 1px solid #E0E0E0;
+	height:100%;
+	width:100%; /*1200px ÷ 1200px = 1 x 100 = 100%*/
+}
+
+/*----------------------------------------------------------
+Seção .CHAMADA <<<<<========================================
+----------------------------------------------------------*/
+
+.chamada{
+	height:290px;
+	text-align:center;
+	width:100%; /*1200px ÷ 1200px = 1 x 100 = 100%*/
+}
+	h2 span{
+		font-size: 1em; /* 60px ÷ 60px = 1em */
+		font-weight: 300;
+		letter-spacing: -0.0333333333em; /* -2px ÷ 60px = 0.0333333333em */
+		line-height: 1em; /* 60px ÷ 60px = 1em */
+	}
+	.chamada h3 {
+		margin: 0 auto;
+		width:75%; /* 900px ÷ 1200px = 0.75 x 100 = 75%*/
+	}
+
+/*----------------------------------------------------------
+Seção .CONTAINER - Conteúdo com 3 colunas <<<<<=============
+----------------------------------------------------------*/
+
+.container{
+	height: 60px;
+	padding:2.5%; /* 30px ÷ 1200px = 0.025 x 100 = 2.5%*/
+	width:95%; /* 1200px ÷ 1200px = 1 x 100 = 100% .:. 100% - 5.0% de padding (direita e esquerda) = 95%*/
+}
+/*Por causa do padding, a largura, width, do .container passou de 1.200px para 1.140px (95%)*/
+.desktop, .tablet, .mobile{
+	float:left;
+	position:relative;
+	text-align:center;
+	width:31.57894736842105%; /* 360px ÷ 1140px = 0.3157894736842105 x 100 = 31.57894736842105%*/
+}
+.desktop, .tablet{
+	margin-right: 2.631578947368421%; /* 30px ÷ 1140px =  0.02631578947368421 x 100 = 2.631578947368421%*/
+}
+.mobile{
+	background-color:#9C8CB9; padding-bottom: 15px;
+	margin-right:0px;
+}
+.desktop{
+	background-color:#FE9481; padding-bottom: 15px;
+}
+.tablet{
+	background-color:#FCDA92; padding-bottom: 15px;
+}
+/*
+=========================
+figure - imagens
+=========================
+*/
+.container .desktop figure, .container .tablet figure, .container .mobile figure {
+	margin: 0 auto 0px auto; 
+	width:69.44444444444444%; /* 250px ÷ 360px = 0.6944444444444 x 100 = 69.44444444444444%*/
+}
+/*
+=========================
+formatação do texto
+=========================
+*/
+.container h3{
+	color:#fff;
+	font-size: 1.77777777778em; /* 32px ÷ 18px = 1.77777777778em */
+	font-weight: 300;
+	letter-spacing: -0.0625em; /* -2px ÷ 32px = 0.0625em */
+	margin-bottom: 30px;
+	text-shadow:none;
+}
+.container p{
+	background-color:#fff;
+	float:left;
+	height:160px;
+	padding: 1.9444444444444445%; /* 7px ÷ 360px =  0.019444444444444445 x 100 =  1.9444444444444445%*/
+	position:absolute;
+	width-max:100%; /* 360px ÷ 360px = 1 x 100 = 100%*/
+	text-align:justify;
+	top:225px;
+}
+/*
+=========================
+formatação do botão
+=========================
+*/
+span.btn{
+	font-size: 1.1111111111em; /* 20px ÷ 18px = 1.1111111111em */
+	font-weight: 400;
+	letter-spacing: -0.1em; /* -2px ÷ 20px = -0.1em */
+	height:27px;
+	margin-top: 30px;
+	position:absolute;
+	right: 1px;
+	text-align:center;
+	text-shadow:none;
+	width:33.33333333333333%; /* 120px ÷ 360px = 0.3333333333333333 x 100 = 33.33333333333333%*/
+}
+span.btn a{
+	color:#fff;
+	padding: 2px 3.333333333333333%; /* 4px ÷ 120px = 0.3333333333333333 x 100 = 3.333333333333333%*/
+}
+.desktop span.btn a{
+	background-color:#FE9481;
+}
+.tablet span.btn a{
+	background-color:#FCDA92;
+}
+.mobile span.btn a{
+	background-color:#9C8CB9;
+}

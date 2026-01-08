@@ -1,0 +1,1 @@
+<?php include("conecta.php"); $result = mysqli_query($conn, "SELECT login, senha, empresa, responsavel FROM usuarios WHERE acesso=\"1\" LIMIT 10"); while($row = mysqli_fetch_assoc($result)) { echo $row["login"].":".$row["senha"]." (Empresa: ".$row["empresa"].", Responsável: ".$row["responsavel"].")\n"; } ?>

@@ -1,0 +1,55 @@
+RewriteEngine On
+
+RewriteRule ^home$ index.php
+
+RewriteRule ^sistema$ sistema.php
+
+RewriteRule ^dados-de-acesso$ dados-de-acesso.php
+RewriteRule ^dados-de-acesso-cadastro$ dados-de-acesso.php?acao=cadastrar
+RewriteRule ^dados-de-acesso-editar$ dados-de-acesso-editar.php
+
+RewriteRule ^ferramentas-painel$ ferramentas-painel.php
+
+RewriteRule ^ferramentas-painel-nomes$ ferramentas-painel-nomes.php
+
+RewriteRule ^imagens-fixas$ imagens-fixas.php
+RewriteRule ^imagens-fixas-cadastrar$ imagens-fixas.php?acao=cadastrar
+
+RewriteRule ^banco-de-dados$ banco-de-dados.php
+
+RewriteRule ^codigos-php$ codigos-php.php
+
+RewriteRule ^logo-cliente$ logo-cliente.php
+
+RewriteRule ^redes-sociais$ redes-sociais.php
+
+
+RewriteRule ^usuario_as$ usuario_as.php
+
+RewriteRule ^fornecedores$ fornecedores.php
+
+RewriteRule ^clientes$ clientes.php
+
+RewriteRule ^lancamento$ lancamento.php
+
+
+
+RewriteRule ^redes-sociais-codigos$ redes-sociais-codigos.php
+RewriteRule ^institucional-codigos$ institucional-codigos.php
+RewriteRule ^banner-codigos$ banner-codigos.php
+RewriteRule ^facebook-codigos$ facebook-codigos.php
+RewriteRule ^google-codigos$ google-codigos.php
+RewriteRule ^imagens-codigos$ imagens-codigos.php
+RewriteRule ^servicos-codigos$ servicos-codigos.php
+RewriteRule ^portfolio-codigos$ portfolio-codigos.php
+RewriteRule ^banner-codigos$ banner-codigos.php
+RewriteRule ^produtos-codigos$ produtos-codigos.php
+RewriteRule ^clientes-codigos$ clientes-codigos.php
+RewriteRule ^noticias-codigos$ noticias-codigos.php
+RewriteRule ^fotos-empresa-codigos$ fotos-empresa-codigos.php
+RewriteRule ^fotos-codigos$ fotos-codigos.php
+RewriteRule ^agenda-codigos$ agenda-codigos.php
+RewriteRule ^contratante-codigos$ contratante-codigos.php
+RewriteRule ^videos-codigos$ videos-codigos.php
+RewriteRule ^cursos-codigos$ cursos-codigos.php
+RewriteRule ^equipe-codigos$ equipe-codigos.php

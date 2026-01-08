@@ -1,0 +1,4 @@
+<?php session_start(); include('conecta.php'); if(empty($_POST['login']) || empty($_POST['senha'])){header('Location: index.php?erro=logar');exit();}
+$login = mysqli_real_escape_string($conn, $_POST['login']);$senha = mysqli_real_escape_string($conn, $_POST['senha']);
+$sql = "Select * FROM usuarios where login = '$login' and senha = '$senha' and acesso='0'";
+$result = mysqli_query($conn, $sql);$row = mysqli_num_rows($result);if($row == 1) {$_SESSION['login'] = $login; $_SESSION['senha'] = $senha;header('Location: sistema.php');exit();}else {$_SESSION['nao_autenticado'] = true;header('Location: index.php?erro=senha');exit();}?>

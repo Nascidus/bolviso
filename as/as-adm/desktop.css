@@ -1,0 +1,370 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Jaldi');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('resize.css');
+@import url('componentmenu.css');
+
+@charset "utf-8";
+/* CSS Document */
+
+body {font-size: 12px; font-family: verdana; background: #ececec top center; margin: auto; overflow-x: hidden;}
+
+img {border: 0;}
+
+.cut1 :nth-child(3n){margin-right: 0!important;}
+.cut2 :nth-child(5n){margin-right: 0!important;}
+
+.sub-link {width: 90%; float: left; color: #000; font: 13px 'Roboto'; margin: -22px 0 0 13%}
+.sub-link-bottom {color: #494949; font: 17px 'Roboto'; padding: 0 0 0 0; text-align: left; border: 0px; outline: none; font-weight: bold;}
+
+#ferramentas-painel-padding {width: 100%; height: 100%; float: right; padding-bottom: 20%;}
+
+.alinha0 {float: right; color: #494949; font: 17px 'Source Code Pro'; font-weight: bold;}
+.alinha1 {width: 100%; float: left; color: #909090; font: 23px 'Roboto'; margin-bottom: 8%;}
+.alinha2 {width: 100%; float: left; color: #909090; font: 18px 'Roboto';}
+.alinha3 {width: 100%; float: left; color: #a3a3a3; font: 18px 'Raleway'; text-align: center; margin-top: 3%;}
+.alinha4 {float: left; color: #494949; font: 17px 'Roboto'; font-weight: bold; margin-top: 2px;}
+.alinha5 {float: left; color: #163488; font: 18px 'Raleway'; font-weight: bold;}
+.alinha6 {float: left; color: #242222; font: 17px 'Quicksand'; font-weight: bold; padding-left: 10px; margin-bottom: 30px;}
+.alinha7 {width: 100%; float: left; color: #000; font: 17px 'Quicksand'; margin-bottom: 20px;}
+.alinha8 {width: 100%; float: left; color: #666666; font: 17px 'Jaldi';}
+.alinha9 {width: 100%; float: left; color: #666666; font: 17px 'Jaldi'; padding: 40px 0 10px 0;}
+.alinha10 {width: 85%; float: left; color: #000; font: 14px 'Jaldi'; font-weight: 300; }
+.alinha11 {width: 100%; float: left; color: #242222; font: 17px 'Quicksand'; font-weight: bold; margin-top: 30px;}
+.alinha12 {width: 100%; float: left; color: #000; font: 12px 'Roboto'; padding: 5px 0 5px 0; background: #fff; padding-left: 10px; margin-top: 5px;}
+.alinha13 {width: 100%; float: left; color: #242222; font: 17px 'Quicksand'; font-weight: bold; margin-top: 20px;}
+
+
+#grid0 {float: left;}
+#grid12 {width: 100%; height: auto; float: left;}
+#grid12A {height: auto; float: right; margin: 15px 25px 0 0;}
+#grid12B {width: 50%; height: auto; float: right; margin: 30px 0 0 0; padding-right: 30px;}
+#grid12C {width: 100%; float: left; margin: 25px 0 0 0;}
+#grid12D {width: 85%; height: auto; float: right; margin: 30px 0 0 0; padding-right: 30px;}
+
+
+a:link {color: #494949; text-decoration: none;}
+a:visited {color: #494949; text-decoration: none;}
+a:hover  {text-decoration: none; color: #20419f;}
+
+.index-logo-cliente {width: 220px; height: auto; float: none; margin: 0 auto 0 auto; padding: 7% 0 5% 0; overflow: hidden;}
+#index-login {width: 33%; height: 350px; float: none; margin: 0 auto 0 auto; background: #fff; border: 10px #e3e3e3 solid; padding: 20px;}
+.acessar {width: 100%; height: 60px; float: right; border: none; color: #fff;  font: 18px 'Jaldi'; background: #2c51ba;}
+.acessar:hover {background-color: #2143a1; color: white;}
+.form1 {width:97%; height:50px; border:0px; background: #ececec; color: #000; float: left; padding-left: 10px; outline: none; margin-bottom: 25px;}
+.index-logoas {width: 60px; height: auto; float: none; margin: 0 auto 0 auto; padding-top: 15px; overflow: hidden;}
+
+#sistemas-topo {width: 100%; height: 118px; float: left; background: url(img/topo.jpg) top center; margin-top: -15px;}
+#sistemas-topo-mobile {display: none;}
+#sistemas-azul {width: 25%; height: auto; float: left; background: #20419f;}
+.sistemas-logo {width: 170px; height: auto; float: none; margin: 0 auto 0 auto; padding: 13px 0 12px 0;}
+#sistemas-icons {height: 49px; float: right; margin-top: 30px;}
+.sistemas-icons-img {height: 49px; float: right; margin-left: 10px; overflow: hidden;}
+.sistemas-marcador {width: 17px; height: 11px; float: none; margin: -14px auto 20px auto;}
+#sistemas-menu-lateral {width: 23.1%; height: auto; float: left; background: #dfdfdf; padding: 13px; border-bottom: 2px #20419f solid;}
+#sistemas-menu-links {width: 100%; float: left; padding: 10px 0 10px 0; border-bottom: 1px #c9c9c9 solid; margin-bottom: 10px;}
+.sistemas-menu-icons {width: 24px; float: left; padding-right: 15px; overflow: hidden;}
+#sistemas-infos {width: 73%; height: auto; float: right; margin-top: 43px;}
+#logo-sair {display: none;}
+#sistemas-menu-lateral-mobiles {display: none;}
+
+.dados-de-acesso-logo {width: 20px; float: left; overflow: hidden;}
+#dados-acesso {width: 31%; float: left; margin: 0 20px 20px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.form2 {width:97%; height:50px; border:0px; background: #969696; color: #ececec; float: left; padding-left: 10px; outline: none;}
+.form2_green {width:97%; height:50px; border:0px; background: #a9d6a4; color: #ececec; float: left; padding-left: 10px; outline: none;}
+.alterar {width: 150px; height: 60px; float: right; border: none; color: #fff;  font: 18px 'Jaldi'; background: #2c51ba;}
+.alterar:hover {background-color: #2143a1; color: white;}
+
+.ferramentas-painel-logo {width: 20px; float: left; margin-top: 2px; overflow: hidden;}
+.form3 {width:97%; height:50px; border:0px; background: #969696; color: #ececec; float: left; padding-left: 10px; outline: none;}
+#ferramentas-painel-editNome {width: 31%; float: left; margin: 0 20px 20px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+
+#selecionar-imagem {width: 30%; float: left; margin: 0 20px 20px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+#imagens-fixas {width: 100%; height: 100%; float: left; margin-top: 30px; padding-bottom: 20%;}
+.botaocadastrar {width: 150px; height: 52px; float: left; border: none; color: #fff;  font: 18px 'Jaldi'; background: #2c51ba;}
+.botaocadastrar:hover {background: #2143a1; color: white;}
+input[type='file'] {display: none}
+.input-wrapper label {background: #2c51ba; border-radius: 5px;color: #fff; width: 100%; padding: 13px 0 13px 0; float: left; text-align: center;}
+.input-wrapper label:hover {background: #2143a1}
+#imagens-fixas-qdro {width: 17.5%; height: 100%; float: left; margin: 10px 20px 0 0; overflow: hidden;}
+#imagens-fixas-cinza {width: 100%; height: 100%; float: left; background: #bcbcbc;}
+#imagens-fixas-center {width: 100%; height: auto; float: left;}
+.imagens-fixas-img {width: 85%; height: auto; float: none; margin: 0 auto 0 auto; padding: 10px 0 10px 0; overflow: hidden;}
+.imagens-fixas-excluir {width: 16px; float: right; margin: -30px 10% 0 0; overflow: hidden;}
+.form4 {width:95%; height:12px; border:0px; color: #000; float: left; outline: none;}
+
+
+#codigos_php {width: 100%; float: left; margin-bottom: 20px; border-bottom: 1px solid #ccc; padding: 15px 0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+1200px – Desktops, notebooks com monitores widescreen
+***********************************************************/
+@media screen and (max-width: 1200px){
+	/*! TELA INDEX */
+#index-login {width: 38%; height: 350px; float: none; margin: 0 auto 0 auto; background: #fff; border: 10px #e3e3e3 solid; padding: 20px;}	
+
+	/*! TELA SISTEMA */
+#sistemas-topo-mobile {display: none;}
+#sistemas-menu-lateral {width: 22%; height: auto; float: left; background: #dfdfdf; padding: 13px; border-bottom: 2px #20419f solid;}
+.alinha4 {float: left; color: #494949; font: 15px 'Roboto'; font-weight: bold; padding-top: 2px;}
+#logo-sair {display: none;}
+#sistemas-menu-lateral-mobiles {display: none;}
+
+	/*! TELA DADOS DE ACESSO */
+#grid12A {height: auto; float: right; margin: 15px 10px 0 0;}
+#dados-acesso {width: 30%; float: left; margin: 0 20px 0 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+
+	/*! TELA IMAGENS FIXAS */
+#selecionar-imagem {width: 30%; float: left; margin: 0 20px 20px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+}
+
+
+
+
+
+
+/* 
+960px – Tablets no formato paisagem e alguns monitores mais antigos
+***********************************************************/
+@media screen and (max-width:960px){
+	/*! TELA INDEX */
+#index-login {width: 43%; height: 350px; float: none; margin: 0 auto 0 auto; background: #fff; border: 10px #e3e3e3 solid; padding: 20px;}		
+
+	/*! TELA SISTEMA */
+#sistemas-topo-mobile {display: none;}
+#sistemas-menu-lateral {width: 26.4%; height: auto; float: left; background: #dfdfdf; padding: 13px; border-bottom: 2px #20419f solid;}
+#sistemas-azul {width: 30%; height: auto; float: left; background: #20419f;}
+#sistemas-infos {width: 67%; height: auto; float: right; margin-top: 43px;}
+.alinha4 {float: left; color: #494949; font: 15px 'Roboto'; font-weight: bold; padding-top: 2px;}
+.sistemas-menu-icons {width: 24px; float: left; padding-right: 8px; overflow: hidden;}
+#logo-sair {display: none;}
+#sistemas-menu-lateral-mobiles {display: none;}
+
+	/*! TELA DADOS DE ACESSO */
+#grid12A {height: auto; float: right; margin: 15px 10px 0 0;}
+#ferramentas-painel-editNome {width: 30%; float: left; margin: 0 20px 20px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+
+	/*! TELA IMAGENS FIXAS */
+#selecionar-imagem {width: 29%; float: left; margin: 0 20px 20px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.cut2 :nth-child(3n){margin-right: 0!important;}
+#imagens-fixas-qdro {width: 30%; height: 100%; float: left; margin: 10px 20px 0 0; overflow: hidden;}
+}
+
+
+
+
+
+/* 
+768px – Tablets no formato retrato, como o iPad
+***********************************************************/
+@media screen and (max-width:768px){
+	/*! TELA INDEX */	
+#index-login {width: 55%; height: 350px; float: none; margin: 0 auto 0 auto; background: #fff; border: 10px #e3e3e3 solid; padding: 20px;}	
+.index-logo-cliente {width: 220px; height: auto; float: none; margin: 0 auto 0 auto; padding: 7% 0 7% 0; overflow: hidden;}
+.alinha3 {width: 100%; float: left; color: #a3a3a3; font: 18px 'Raleway'; text-align: center; margin-top: 7%;}
+
+	/*! TELA SISTEMA */
+#sistemas-topo-mobile {display: none;}
+#sistemas-menu-lateral {width: 26.4%; height: auto; float: left; background: #dfdfdf; padding: 13px; border-bottom: 2px #20419f solid;}
+#sistemas-azul {width: 30%; height: auto; float: left; background: #20419f;}
+#sistemas-infos {width: 67%; height: auto; float: right; margin-top: 43px;}
+.alinha4 {float: left; color: #494949; font: 13px 'Roboto'; font-weight: bold; padding-top: 3px;}
+.sistemas-menu-icons {width: 24px; float: left; padding-right: 8px; overflow: hidden;}
+#logo-sair {display: none;}
+#sistemas-menu-lateral-mobiles {display: none;}
+
+	/*! TELA DADOS DE ACESSO */
+#grid12A {height: auto; float: right; margin: 15px 10px 0 0;}
+#dados-acesso {width: 100%; float: left; margin: 0 0 5px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.form2 {width:97%; height:38px; border:0px; background: #969696; color: #ececec; float: left; padding-left: 5px; outline: none;}
+.alterar {width: 150px; height: 45px; float: right; border: none; color: #fff;  font: 18px 'Jaldi'; background: #2c51ba;}
+#ferramentas-painel-editNome {width: 100%; float: left; margin: 0 0 20px 0; color: #969696; font: 15px 'Jaldi'; overflow: hidden;}
+
+	/*! TELA IMAGENS FIXAS */
+#selecionar-imagem {width: 100%; float: left; margin: 0 0 10px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.cut2 :nth-child(3n){margin-right: 0!important;}
+#imagens-fixas-qdro {width: 100%; height: 100%; float: left; margin: 10px 0 20px 0; overflow: hidden;}
+#imagens-fixas-center {width: 100%; height: auto; float: left; padding: 20px 0 20px 0}
+.botaocadastrar {width: 150px; height: 52px; float:none; margin: 0 auto 0 auto; border: none; color: #fff;font: 18px 'Jaldi'; background: #2c51ba;}
+}
+
+
+
+
+
+
+/* 
+640px – iPhone no formato retrato
+***********************************************************/
+@media screen and (max-width:640px) and (min-width: 481px){
+	/*! TELA INDEX */	
+.alinha1 {width: 100%; float: left; color: #909090; font: 27px 'Raleway'; margin-bottom: 8%; text-align: center;}
+#index-login {width: 70%; height: 350px; float: none; margin: 0 auto 0 auto; background: #fff; border: 10px #e3e3e3 solid; padding: 20px;}	
+.index-logo-cliente {width: 220px; height: auto; float: none; margin: 0 auto 0 auto; padding: 7% 0 7% 0; overflow: hidden;}
+.alinha3 {width: 100%; float: left; color: #a3a3a3; font: 18px 'Raleway'; text-align: center; margin-top: 7%;}
+
+	/*! TELA SISTEMA */
+body {font-size: 12px; font-family: verdana; background: #fff top center; margin: auto; overflow-x: hidden;}
+#sistemas-topo {display: none;}
+#sistemas-topo-mobile {width: 100%; height: 100%; float: left; background: #2046b2; margin-top: -15px; padding: 10px 0 20px 0; display: block;}
+#sistemas-infos {width: 100%; height: auto; float: left; margin-top: 5%;}
+#sistemas-menu-lateral {display: none;}
+.alinha4 {float: left; color: #494949; font: 15px 'Roboto'; font-weight: bold; padding-top: 0;}
+.sistemas-mobiles-logo {width: 170px; height: auto; float: none; margin: 0 auto 0 auto;}
+.sistemas-marcador {display: none;}
+.sistemas-marcador-mobiles {width: 17px; height: 11px; float: none; margin: -1px auto 0 auto;}
+#logo-sair {width: 100%; float: left; display: block;}
+.logo-sair-icon {width: 70px; float: none; margin: 0 auto 0 auto; padding: 30px 0 30px 0; overflow: hidden;}
+.logo-fechar-icon {width: 34px; float: right; padding-right: 25px; margin-top: -80px; overflow: hidden;}
+#sistemas-menu-lateral-mobiles {width: 100%; height: auto; float: left; background: #dfdfdf; display: block; overflow: hidden;}
+
+	/*! TELA DADOS DE ACESSO */
+#grid12A {width: 100%; height: auto; float: right; margin: 15px 0 0 0; padding-bottom: 25px;}
+#dados-acesso {width: 100%; float: left; margin: 0 0 5px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.form2 {width:98%; height:38px; border:0px; background: #969696; color: #ececec; float: left; padding-left: 5px; outline: none;}
+.alterar {width: 150px; height: 45px; float: none; margin: 0 auto 0 auto; border: none; color: #fff;  font: 18px 'Jaldi'; background: #2c51ba;}
+
+	/*! TELA FERRAMENTAS PAINEL */
+#grid12B {width: 100%; height: auto; float: left; margin: 30px 0 30px 0; padding: none;}
+#ferramentas-painel-padding {width: 100%; height: 100%; float: right; padding: 0 0 0 0;}
+#ferramentas-painel-editNome {width: 100%; float: left; margin: 0 0 20px 0; color: #969696; font: 15px 'Jaldi'; overflow: hidden;}
+.sub-link-bottom {color: #494949; font: 17px 'Roboto'; padding: 0 0 0 0; text-align: left; border: 0px; outline: none; font-weight: bold; float:  left; margin-left:  -23px; width:  100%;}
+.alinha10 {width: 100%; float: left; color: #000; font: 14px 'Jaldi'; font-weight: 300;margin-left:  -23px; overflow:  hidden;}	
+	/*! TELA IMAGENS FIXAS */
+#selecionar-imagem {width: 100%; float: left; margin: 0 0 10px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.cut2 :nth-child(3n){margin-right: 0!important;}
+#imagens-fixas-qdro {width: 100%; height: 100%; float: left; margin: 10px 0 20px 0; overflow: hidden;}
+#imagens-fixas-center {width: 100%; height: auto; float: left; padding: 20px 0 20px 0}
+.botaocadastrar {width: 150px; height: 52px; float:none; margin: 0 auto 0 auto; border: none; color: #fff;font: 18px 'Jaldi'; background: #2c51ba;}
+}
+
+
+
+
+
+/* 
+480px – Smartphones no formato paisagem com tela pequena
+***********************************************************/
+@media screen and (max-width:480px){
+	/*! TELA INDEX */	
+.alinha1 {width: 100%; float: left; color: #909090; font: 27px 'Raleway'; margin-bottom: 8%; text-align: center;}
+#index-login {width: 83%; height: 350px; float: none; margin: 0 auto 0 auto; background: #fff; border: 10px #e3e3e3 solid; padding: 20px;}		
+.index-logo-cliente {width: 220px; height: auto; float: none; margin: 0 auto 0 auto; padding: 7% 0 7% 0; overflow: hidden;}
+.alinha3 {width: 100%; float: left; color: #a3a3a3; font: 18px 'Raleway'; text-align: center; margin-top: 7%;}
+
+	/*! TELA SISTEMA */
+body {font-size: 12px; font-family: verdana; background: #fff top center; margin: auto; overflow-x: hidden;}
+#sistemas-topo {display: none;}
+#sistemas-topo-mobile {width: 100%; height: 100%; float: left; background: #2046b2; margin-top: -15px; padding: 10px 0 20px 0; display: block;}
+#sistemas-infos {width: 100%; height: auto; float: left; margin-top: 5%;}
+#sistemas-menu-lateral {display: none;}
+.alinha4 {float: left; color: #494949; font: 15px 'Roboto'; font-weight: bold; padding-top: 0;}
+.sistemas-mobiles-logo {width: 170px; height: auto; float: none; margin: 0 auto 0 auto;}
+.sistemas-marcador {display: none;}
+.sistemas-marcador-mobiles {width: 17px; height: 11px; float: none; margin: -1px auto 0 auto;}
+#logo-sair {width: 100%; float: left; display: block;}
+.logo-sair-icon {width: 70px; float: none; margin: 0 auto 0 auto; padding: 30px 0 30px 0; overflow: hidden;}
+.logo-fechar-icon {width: 34px; float: right; padding-right: 25px; margin-top: -80px; overflow: hidden;}
+#sistemas-menu-lateral-mobiles {width: 100%; height: auto; float: left; background: #dfdfdf; display: block; overflow: hidden;}
+	
+	/*! TELA DADOS DE ACESSO */
+#grid12A {width: 100%; height: auto; float: right; margin: 15px 0 0 0; padding-bottom: 25px;}
+#dados-acesso {width: 100%; float: left; margin: 0 0 5px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.form2 {width:98%; height:38px; border:0px; background: #969696; color: #ececec; float: left; padding-left: 5px; outline: none;}
+.alterar {width: 150px; height: 45px; float: none; margin: 0 auto 0 auto; border: none; color: #fff;  font: 18px 'Jaldi'; background: #2c51ba;}
+
+	/*! TELA FERRAMENTAS PAINEL */
+#grid12B {width: 100%; height: auto; float: left; margin: 30px 0 30px 0; padding: none;}
+#ferramentas-painel-padding {width: 100%; height: 100%; float: right; padding: 0 0 0 0;}
+#ferramentas-painel-editNome {width: 100%; float: left; margin: 0 0 20px 0; color: #969696; font: 15px 'Jaldi'; overflow: hidden;}
+.sub-link-bottom {color: #494949; font: 13px 'Roboto'; padding: 0 0 0 0; text-align: left; border: 0px; outline: none; font-weight: bold; float:  left; margin-left:  -15px; width:  90%;}
+.alinha10 {width: 90%; float: left; color: #000; font: 14px 'Jaldi'; font-weight: 300;margin-left:  -19px; overflow:  hidden;}
+
+.form2 {width: 100%; height:50px; border:0px; background: #969696; color: #ececec; float: left; padding-left: 10px; outline: none;}
+	
+	
+	/*! TELA IMAGENS FIXAS */
+#selecionar-imagem {width: 100%; float: left; margin: 0 0 10px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.cut2 :nth-child(3n){margin-right: 0!important;}
+#imagens-fixas-qdro {width: 100%; height: 100%; float: left; margin: 10px 0 20px 0; overflow: hidden;}
+#imagens-fixas-center {width: 100%; height: auto; float: left; padding: 20px 0 20px 0}
+.botaocadastrar {width: 150px; height: 52px; float:none; margin: 0 auto 0 auto; border: none; color: #fff;font: 18px 'Jaldi'; background: #2c51ba;}
+}
+
+
+
+
+
+
+/* 
+384px – Smartphones antigos com tela pequena
+***********************************************************/
+@media screen and (max-width:384px){
+	/*! TELA INDEX */	
+.alinha1 {width: 100%; float: left; color: #909090; font: 27px 'Raleway'; margin-bottom: 8%; text-align: center;}
+#index-login {width: 85%; height: 320px; float: none; margin: 0 auto 0 auto; background: #fff; border: none; padding: none; overflow: hidden;}		
+.index-logo-cliente {width: 220px; height: auto; float: none; margin: 0 auto 0 auto; padding: 7% 0 7% 0; overflow: hidden;}
+.alinha3 {width: 100%; float: left; color: #a3a3a3; font: 18px 'Raleway'; text-align: center; margin-top: 7%;}
+
+	/*! TELA SISTEMA */
+body {font-size: 12px; font-family: verdana; background: #fff top center; margin: auto; overflow-x: hidden;}
+#sistemas-topo {display: none;}
+#sistemas-topo-mobile {width: 100%; height: 100%; float: left; background: #2046b2; margin-top: -15px; padding: 10px 0 20px 0; display: block;}
+#sistemas-infos {width: 100%; height: auto; float: left; margin-top: 5%;}
+#sistemas-menu-lateral {display: none;}
+.alinha4 {float: left; color: #494949; font: 15px 'Roboto'; font-weight: bold; padding-top: 0;}
+.sistemas-mobiles-logo {width: 170px; height: auto; float: none; margin: 0 auto 0 auto;}
+.sistemas-marcador {display: none;}
+.sistemas-marcador-mobiles {width: 17px; height: 11px; float: none; margin: -1px auto 0 auto;}
+#logo-sair {width: 100%; float: left; display: block;}
+.logo-sair-icon {width: 70px; float: none; margin: 0 auto 0 auto; padding: 30px 0 30px 0; overflow: hidden;}
+.logo-fechar-icon {width: 34px; float: right; padding-right: 25px; margin-top: -80px; overflow: hidden;}
+#sistemas-menu-lateral-mobiles {width: 100%; height: auto; float: left; background: #dfdfdf; display: block; overflow: hidden;}
+.alinha6 {float: left; color: #242222; font: 15px 'Quicksand'; font-weight: bold; padding-left: 10px; margin-bottom: 30px;}
+
+	/*! TELA DADOS DE ACESSO */
+#grid12A {width: 100%; height: auto; float: right; margin: 15px 0 0 0; padding-bottom: 25px;}
+#dados-acesso {width: 100%; float: left; margin: 0 0 5px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.form2 {width:98%; height:38px; border:0px; background: #969696; color: #ececec; float: left; padding-left: 5px; outline: none;}
+.alterar {width: 150px; height: 45px; float: none; margin: 0 auto 0 auto; border: none; color: #fff;  font: 18px 'Jaldi'; background: #2c51ba;}
+
+	/*! TELA FERRAMENTAS PAINEL */
+#grid12B {width: 100%; height: auto; float: left; margin: 30px 0 30px 0; padding: none;}
+#ferramentas-painel-padding {width: 100%; height: 100%; float: right; padding: 0 0 0 0;}
+#ferramentas-painel-editNome {width: 100%; float: left; margin: 0 0 20px 0; color: #969696; font: 15px 'Jaldi'; overflow: hidden;}
+.sub-link-bottom {color: #494949; font: 17px 'Roboto'; padding: 0 0 0 0; text-align: left; border: 0px; outline: none; font-weight: bold; float:  left; margin-left:  -7px; width:  100%;}
+.alinha10 {width: 85%; float: left; color: #000; font: 14px 'Jaldi'; font-weight: 300;margin-left:  -10px; overflow:  hidden;}
+	
+	/*! TELA IMAGENS FIXAS */
+#selecionar-imagem {width: 100%; float: left; margin: 0 0 10px 0; color: #000; font: 15px 'Jaldi'; overflow: hidden;}
+.cut2 :nth-child(3n){margin-right: 0!important;}
+#imagens-fixas-qdro {width: 100%; height: 100%; float: left; margin: 10px 0 20px 0; overflow: hidden;}
+#imagens-fixas-center {width: 100%; height: auto; float: left; padding: 20px 0 20px 0}
+.botaocadastrar {width: 150px; height: 52px; float:none; margin: 0 auto 0 auto; border: none; color: #fff;font: 18px 'Jaldi'; background: #2c51ba;}
+}
+
+
+
+

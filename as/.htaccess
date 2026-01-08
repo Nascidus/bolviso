@@ -1,0 +1,188 @@
+RewriteEngine On
+
+RewriteRule ^home$ index.php
+RewriteRule ^sistema$ sistema.php
+RewriteRule ^institucional$ institucional.php
+RewriteRule ^google$ google.php
+RewriteRule ^meta-tags-facebook$ meta-tags-facebook.php
+RewriteRule ^redes-sociais$ redes-sociais.php
+RewriteRule ^fotos-empresa$ fotos-empresa.php
+
+RewriteRule ^banner$ banner.php
+RewriteRule ^banner-editar$ banner-editar.php
+RewriteRule ^banner-imagem-editar$ banner-imagem-editar.php
+RewriteRule ^banner-filtro$ banner-filtro.php
+RewriteRule ^banner-categorias$ banner-categorias.php
+RewriteRule ^banner-cadastrar$ banner-cadastrar.php
+
+RewriteRule ^banner-conteudo$ banner-conteudo.php
+RewriteRule ^banner-conteudo-editar$ banner-conteudo-editar.php
+RewriteRule ^banner-conteudo-imagem-editar$ banner-conteudo-imagem-editar.php
+RewriteRule ^banner-conteudo-cadastrar$ banner-conteudo-cadastrar.php
+
+RewriteRule ^clipping$ clipping.php
+RewriteRule ^clipping-editar$ clipping-editar.php
+RewriteRule ^clipping-imagem-editar$ clipping-imagem-editar.php
+RewriteRule ^clipping-filtro$ clipping-filtro.php
+RewriteRule ^clipping-categorias$ clipping-categorias.php
+RewriteRule ^clipping-cadastrar$ clipping-cadastrar.php
+
+RewriteRule ^links-uteis$ links-uteis.php
+RewriteRule ^links-editar$ links-editar.php
+RewriteRule ^links-imagem-editar$ links-imagem-editar.php
+RewriteRule ^links-filtro$ links-filtro.php
+RewriteRule ^links-categorias$ links-categorias.php
+RewriteRule ^links-cadastrar$ links-cadastrar.php
+
+RewriteRule ^clientes$ clientes.php
+RewriteRule ^clientes-editar$ clientes-editar.php
+RewriteRule ^clientes-imagem-editar$ clientes-imagem-editar.php
+RewriteRule ^clientes-filtro$ clientes-filtro.php
+RewriteRule ^clientes-categorias$ clientes-categorias.php
+RewriteRule ^clientes-cadastrar$ clientes-cadastrar.php
+
+RewriteRule ^servicos$ servicos.php
+RewriteRule ^servicos-editar$ servicos-editar.php
+RewriteRule ^servicos-imagem-editar$ servicos-imagem-editar.php
+RewriteRule ^servicos-filtro$ servicos-filtro.php
+RewriteRule ^servicos-categorias$ servicos-categorias.php
+RewriteRule ^servicos-cadastrar$ servicos-cadastrar.php
+
+RewriteRule ^portfolio$ portfolio.php
+RewriteRule ^portfolio-editar$ portfolio-editar.php
+RewriteRule ^portfolio-imagem-editar$ portfolio-imagem-editar.php
+RewriteRule ^portfolio-filtro$ portfolio-filtro.php
+RewriteRule ^portfolio-categorias$ portfolio-categorias.php
+RewriteRule ^portfolio-cadastrar$ portfolio-cadastrar.php
+RewriteRule ^portfolio-fotos$ portfolio-fotos.php
+
+RewriteRule ^produtos$ produtos.php
+RewriteRule ^produtos-editar$ produtos-editar.php
+RewriteRule ^produtos-imagem-editar$ produtos-imagem-editar.php
+RewriteRule ^produtos-filtro$ produtos-filtro.php
+RewriteRule ^produtos-categorias$ produtos-categorias.php
+RewriteRule ^produtos-categorias-listar$ produtos-categorias-listar.php
+RewriteRule ^produtos-subcategorias$ produtos-subcategorias.php
+RewriteRule ^produtos-cadastro-subcategorias$ produtos-cadastro-subcategorias.php
+RewriteRule ^produtos-cadastrar$ produtos-cadastrar.php
+RewriteRule ^produtos-fotos$ produtos-fotos.php
+RewriteRule ^imagem-png-produtos$ imagem-png-produtos.php
+
+RewriteRule ^clientes$ clientes.php
+RewriteRule ^clientes-editar$ clientes-editar.php
+RewriteRule ^clientes-imagem-editar$ clientes-imagem-editar.php
+RewriteRule ^clientes-filtro$ clientes-filtro.php
+RewriteRule ^clientes-categorias$ clientes-categorias.php
+RewriteRule ^clientes-cadastrar$ clientes-cadastrar.php
+RewriteRule ^clientes-fotos$ clientes-fotos.php
+
+RewriteRule ^noticias$ noticias.php
+RewriteRule ^noticias-editar$ noticias-editar.php
+RewriteRule ^noticias-imagem-editar$ noticias-imagem-editar.php
+RewriteRule ^noticias-filtro$ noticias-filtro.php
+RewriteRule ^noticias-categorias$ noticias-categorias.php
+RewriteRule ^noticias-cadastrar$ noticias-cadastrar.php
+RewriteRule ^noticias-fotos$ noticias-fotos.php
+
+RewriteRule ^receitas$ receitas.php
+RewriteRule ^receitas-editar$ receitas-editar.php
+RewriteRule ^receitas-imagem-editar$ receitas-imagem-editar.php
+RewriteRule ^receitas-filtro$ receitas-filtro.php
+RewriteRule ^receitas-categorias$ receitas-categorias.php
+RewriteRule ^receitas-cadastrar$ receitas-cadastrar.php
+RewriteRule ^receitas-fotos$ receitas-fotos.php
+
+RewriteRule ^fotos$ fotos.php
+RewriteRule ^fotos-editar$ fotos-editar.php
+RewriteRule ^fotos-imagem-editar$ fotos-imagem-editar.php
+RewriteRule ^fotos-filtro$ fotos-filtro.php
+RewriteRule ^fotos-categorias$ fotos-categorias.php
+RewriteRule ^fotos-cadastrar$ fotos-cadastrar.php
+RewriteRule ^fotos-fotos$ fotos-fotos.php
+RewriteRule ^fotos-galeria$ fotos-galeria.php
+
+RewriteRule ^videos$ videos.php
+RewriteRule ^videos-editar$ videos-editar.php
+RewriteRule ^videos-cadastrar$ videos-cadastrar.php
+
+RewriteRule ^agenda$ agenda.php
+RewriteRule ^agenda-editar$ agenda-editar.php
+RewriteRule ^agenda-cadastrar$ agenda-cadastrar.php
+RewriteRule ^agenda-datas-antigas$ agenda-datas-antigas.php
+
+RewriteRule ^contratante$ contratante.php
+RewriteRule ^contratante-editar$ contratante-editar.php
+RewriteRule ^contratante-cadastrar$ contratante-cadastrar.php
+RewriteRule ^bancodeimagens$ bancodeimagens.php
+
+RewriteRule ^cursos$ cursos.php
+RewriteRule ^cursos-editar$ cursos-editar.php
+RewriteRule ^cursos-cadastrar$ cursos-cadastrar.php
+
+RewriteRule ^equipe$ equipe.php
+RewriteRule ^equipe-editar$ equipe-editar.php
+RewriteRule ^equipe-cadastrar$ equipe-cadastrar.php
+RewriteRule ^equipe-categorias$ equipe-categorias.php
+RewriteRule ^equipe-editar-capa$ equipe-editar-capa.php
+
+RewriteRule ^artigos$ artigos.php
+RewriteRule ^artigos-editar$ artigos-editar.php
+RewriteRule ^artigos-cadastrar$ artigos-cadastrar.php
+
+RewriteRule ^acompanhamento-obras$ acompanhamento-obras.php
+RewriteRule ^obras-editar$ obras-editar.php
+RewriteRule ^obras-cadastrar$ obras-cadastrar.php
+RewriteRule ^fotos-produtos$ fotos-produtos.php
+
+RewriteRule ^cadastros$ cadastros.php
+RewriteRule ^arquivos$ arquivos.php
+
+RewriteRule ^depoimentos$ depoimentos.php
+RewriteRule ^depoimentos-editar$ depoimentos-editar.php
+RewriteRule ^depoimentos-cadastrar$ depoimentos-cadastrar.php
+RewriteRule ^depoimentos-texto-cadastrar$ depoimentos-texto-cadastrar.php
+RewriteRule ^depoimentos-imagem-cadastrar$ depoimentos-imagem-cadastrar.php
+
+RewriteRule ^filiais$ filiais.php
+RewriteRule ^filiais-editar$ filiais-editar.php
+RewriteRule ^filiais-cadastrar$ filiais-cadastrar.php
+
+RewriteRule ^onde-encontrar$ onde-encontrar.php
+RewriteRule ^onde-encontrar-cadastrar$ onde-encontrar-cadastrar.php
+RewriteRule ^onde-encontrar-editar$ onde-encontrar-editar.php
+
+RewriteRule ^tratamentos$ tratamentos.php
+RewriteRule ^tratamentos-editar$ tratamentos-editar.php
+RewriteRule ^tratamentos-imagem-editar$ tratamentos-imagem-editar.php
+RewriteRule ^tratamentos-filtro$ tratamentos-filtro.php
+RewriteRule ^tratamentos-categorias$ tratamentos-categorias.php
+RewriteRule ^tratamentos-categorias-busca$ tratamentos-categorias-busca.php
+RewriteRule ^tratamentos-cadastrar$ tratamentos-cadastrar.php
+RewriteRule ^imagem-png-tratamentos$ imagem-png-tratamentos.php
+RewriteRule ^tratamentos-editar-capa$ tratamentos-editar-capa.php
+RewriteRule ^tratamentos-fotos$ tratamentos-fotos.php
+
+RewriteRule ^perguntas-e-respostas$ perguntas_e_respostas.php
+RewriteRule ^perguntas-e-respostas-tratamentos$ perguntas-e-respostas-tratamentos.php
+RewriteRule ^perguntas-e-respostas-editar$ perguntas-e-respostas-editar.php
+RewriteRule ^perguntas-e-respostas-cadastrar$ perguntas-e-respostas-cadastrar.php
+RewriteRule ^perguntas_e_respostas-cadastrar$ perguntas-e-respostas-cadastrar.php
+RewriteRule ^perguntas-e-respostas-categorias$ perguntas-e-respostas-categorias.php
+RewriteRule ^perguntas-e-respostas-categorias-busca$ perguntas-e-respostas-categorias-busca.php
+
+RewriteRule ^projetos$ projetos.php
+RewriteRule ^projetos-editar$ projetos-editar.php
+RewriteRule ^projetos-cadastrar$ projetos-cadastrar.php
+RewriteRule ^projetos-fotos$ projetos-fotos.php
+RewriteRule ^projetos-editar-capa$ projetos-editar-capa.php
+RewriteRule ^projetos-editar-banner$ projetos-editar-banner.php
+
+RewriteRule ^antes-e-depois$ antes-e-depois.php
+RewriteRule ^antes-e-depois-editar$ antes-e-depois-editar.php
+RewriteRule ^antes-e-depois-cadastrar$ antes-e-depois-cadastrar.php
+RewriteRule ^antes-e-depois-capa-antes$ antes-e-depois-capa-antes.php
+RewriteRule ^antes-e-depois-capa-depois$ antes-e-depois-capa-depois.php
+
+RewriteRule ^downloads$ downloads.php
+RewriteRule ^downloads-editar$ downloads-editar.php
+RewriteRule ^downloads-cadastrar$ downloads-cadastrar.php
