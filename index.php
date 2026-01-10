@@ -3,9 +3,32 @@
 <head>
 	<?php include'as/conecta.php'; error_reporting(0); ini_set('display_errors', 0);?> 
 	<?php
-	$sql = "SELECT * FROM institucional";
-	$comando = mysqli_query($conn, $sql);
-	while($res = mysqli_fetch_assoc($comando)){	
+	// Valores padrão caso não haja conexão com o banco
+	$id = '';
+	$nome = 'Clínica Bel Viso';
+	$titulo = 'Clínica Bel Viso';
+	$titulo2 = 'Clínica Bel Viso';
+	$email = '';
+	$telefone1 = ''; 
+	$telefone2 = '';
+	$cidade = ''; 
+	$estado = '';
+	$setor = '';
+	$endereco = '';
+	$missao = ''; 
+	$visao = '';
+	$valores = '';
+	$texto_apresentacao = '';  
+	$texto_institucional = 'Bem-vindo à Clínica Bel Viso';
+	$texto_institucional_desktop = 'Bem-vindo à Clínica Bel Viso';
+	$cep = '';
+	$ano_atual = date('Y');
+	
+	if ($conn) {
+		$sql = "SELECT * FROM institucional";
+		$comando = mysqli_query($conn, $sql);
+		if ($comando) {
+			while($res = mysqli_fetch_assoc($comando)){	
 	$id = $res['id'];
 	$nome = $res['nome'];
 	$titulo = $res['titulo'];
@@ -25,31 +48,69 @@
 	$texto_institucional_desktop = ($texto_institucional); if(strlen($texto_institucional_desktop) > 15){ $texto_institucional_desktop = substr($texto_institucional_desktop, 0, 348) . "";}
 	$cep = $res['cep'];
 	$ano_atual = date('Y');
-	}?>
+			}
+		}
+	}
+	?>
 	<?php
-	$sql = "SELECT * FROM google ORDER BY id DESC";
-	$comando = mysqli_query($conn, $sql);
-	while($res = mysqli_fetch_assoc($comando)){	
+	// Valores padrão para Google
+	$id = '';
+	$google_maps = '';
+	$google_analytics = '';
+	$google_tag_manager = '';
+	$texto_busca = '';
+	
+	if ($conn) {
+		$sql = "SELECT * FROM google ORDER BY id DESC";
+		$comando = mysqli_query($conn, $sql);
+		if ($comando) {
+			while($res = mysqli_fetch_assoc($comando)){	
 	$id = $res['id'];
 	$google_maps = $res['google_maps'];
 	$google_analytics = $res['google_analytics'];
 	$google_tag_manager = $res['google_tag_manager'];
 	$texto_busca = $res['texto_busca'];
-	}?>
+			}
+		}
+	}
+	?>
 	<?php
-	$sql = "SELECT * FROM redes_sociais";
-	$comando = mysqli_query($conn, $sql);
-	while($res = mysqli_fetch_assoc($comando)){
+	// Valores padrão para redes sociais
+	$id = '';
+	$whatsapp_link = '#';
+	$facebook_link = '#';
+	$linkedin_link = '#';
+	$instagram_link = '#';
+	
+	if ($conn) {
+		$sql = "SELECT * FROM redes_sociais";
+		$comando = mysqli_query($conn, $sql);
+		if ($comando) {
+			while($res = mysqli_fetch_assoc($comando)){
 	$id = $res['id'];
 	$whatsapp_link = $res['whatsapp_link'];
 	$facebook_link = $res['facebook_link'];
 	$linkedin_link = $res['linkedin_link'];
 	$instagram_link = $res['instagram_link'];
-	}?>
+			}
+		}
+	}
+	?>
 	<?php
-	$sql = "SELECT * FROM facebook ORDER BY id DESC";
-	$comando = mysqli_query($conn, $sql);
-	while($res = mysqli_fetch_assoc($comando)){    
+	// Valores padrão para Facebook
+	$id = '';
+	$url = '';
+	$title = '';
+	$site_name = '';
+	$image = '';
+	$type = '';
+	$description = '';
+	
+	if ($conn) {
+		$sql = "SELECT * FROM facebook ORDER BY id DESC";
+		$comando = mysqli_query($conn, $sql);
+		if ($comando) {
+			while($res = mysqli_fetch_assoc($comando)){    
 	$id = $res['id'];
 	$url = $res['url'];
 	$title = $res['title'];
@@ -64,7 +125,10 @@
 	<meta property=\"og:description\" content=\"$description\">
 	<meta property=\"og:image\" content=\"$image\">
 	<meta property=\"og:type\" content=\"$type\">
-	";}?>
+	";			}
+		}
+	}
+	?>
 
 	<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -225,49 +289,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<div class="carousel-inner">
 
 						<?php
-$sql = "SELECT * FROM banner WHERE categoria IN ('tratamentos','tratamentos') AND posicao ='1'";
-$comando = mysqli_query($conn, $sql);
-while($res = mysqli_fetch_assoc($comando)){
+if ($conn) {
+	$sql = "SELECT * FROM banner WHERE categoria = 'tratamentos' ORDER BY posicao ASC";
+	$comando = mysqli_query($conn, $sql);
+	if ($comando) {
+		$first = true;
+		while($res = mysqli_fetch_assoc($comando)){
 
 $id = $res['id'];
 $imagem = $res['imagem'];
 $posicao = $res['posicao'];
 $categoria = $res['categoria'];
 $link = $res['link'];
+$active_class = $first ? 'active' : '';
+$first = false;
 echo"
-							<div class=\"carousel-item active\">
+							<div class=\"carousel-item $active_class\">
 		
 								<a href=\"$whatsapp_link\">
-									<img id=\"sliddesktop\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"First slide\" width=\"100%\">
+									<img id=\"sliddesktop\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\">
 								</a>
 		
 								<a href=\"$whatsapp_link\">
-									<img id=\"slidmobile\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"First slide\" width=\"100%\">
+									<img id=\"slidmobile\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\">
 								</a>
 							</div>
-"; }?>
-
-<?php
-$sql = "SELECT * FROM banner WHERE categoria IN ('tratamentos','tratamentos') AND posicao >='2' ORDER BY posicao ASC";
-$comando = mysqli_query($conn, $sql);
-while($res = mysqli_fetch_assoc($comando)){
-
-$id = $res['id'];
-$imagem = $res['imagem'];
-$posicao = $res['posicao'];
-$categoria = $res['categoria'];
-$link = $res['link'];
-echo"
-							<div class=\"carousel-item\">
-		
-								<a href=\"$whatsapp_link\">
-									<img id=\"sliddesktop\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"First slide\" width=\"100%\">
-								</a>
-								<a href=\"$whatsapp_link\">
-									<img id=\"slidmobile\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"First slide\" width=\"100%\">
-								</a>
-							</div>
-"; }?>		
+"; 		}
+	}
+}?>		
 			
 							
 						</div>
@@ -307,10 +356,12 @@ echo"
 
 			
 <?php
-$id =$_GET['id'];
-$sql = "SELECT * FROM tratamentos ORDER BY id ASC";
-$comando = mysqli_query($conn, $sql);
-while($res = mysqli_fetch_assoc($comando)){
+if ($conn) {
+	$id =$_GET['id'];
+	$sql = "SELECT * FROM tratamentos ORDER BY id ASC";
+	$comando = mysqli_query($conn, $sql);
+	if ($comando) {
+		while($res = mysqli_fetch_assoc($comando)){
 
 $id = $res ['id'];
 $titulo = $res ['titulo'];
@@ -332,7 +383,9 @@ echo"
 					    </div><!--//item-desc-->
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
-"; }?>
+"; 		}
+	}
+}?>
 			 
 
 
@@ -344,18 +397,18 @@ echo"
 	
 	
 <?php
-$acao = $_GET ['acao'];
-if ($acao=='cadastrar'){
+$acao = $_GET ['acao'] ?? '';
+if ($acao=='cadastrar' && $conn){
 
-$id = $_POST ['id'];
-$nome = $_POST ['nome'];
-$email = $_POST ['email'];
-$data_cadastro = $_POST ['data_cadastro'];
-$telefone = $_POST ['telefone'];
+$id = $_POST ['id'] ?? '';
+$nome = $_POST ['nome'] ?? '';
+$email = $_POST ['email'] ?? '';
+$data_cadastro = $_POST ['data_cadastro'] ?? '';
+$telefone = $_POST ['telefone'] ?? '';
 
 $diaatual = date('d');
 $mesatual = date('m');	
-$anoatual = date('20y');	
+$anoatual = date('Y');	
 
 $sql =" 
 INSERT INTO `newsletter` (`id`, `nome`, `email`, `data_cadastro` , `telefone`) 
@@ -369,7 +422,8 @@ if ($conn->query($sql) === TRUE) {
       document.location='javascript:history.go(-1)';
       </script>";
   
-    }}?>
+    }
+}?>
 
 
     <section id="form-section" class="form-section">
@@ -413,10 +467,12 @@ if ($conn->query($sql) === TRUE) {
 
 			   
 <?php
-$id =$_GET['id'];
-$sql = "SELECT * FROM depoimentos ORDER BY id DESC";
-$comando = mysqli_query($conn, $sql);
-while($res = mysqli_fetch_assoc($comando)){
+if ($conn) {
+	$id =$_GET['id'];
+	$sql = "SELECT * FROM depoimentos ORDER BY id DESC";
+	$comando = mysqli_query($conn, $sql);
+	if ($comando) {
+		while($res = mysqli_fetch_assoc($comando)){
 
 $id = $res['id'];
 $nome = $res ['nome'];
@@ -443,7 +499,9 @@ echo"
 				        <div class=\"icon-holder\"><i class=\"fas fa-quote-right\"></i></div>
 				    </div><!--//inner-->
 			    </div><!--//item-->
-"; }?>
+"; 		}
+	}
+}?>
 
 				
 		    </div><!--//row-->
