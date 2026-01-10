@@ -279,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<section id="antesdepois">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-lg-8">
 					<h1>Diagnóstico Inicial e Conclusão do Tratamento</h1>
 					<p>Confira alguns resultados de tratamentos</p>
@@ -339,7 +339,7 @@ echo"
 				</div>
 
 				<div class="col-lg-4 agendamento">
-				<a href="<?php echo"$whatsapp_link";?>">
+					<a href="<?php echo"$whatsapp_link";?>">
 						<img src="assets/images/aparelho-ultraformer.png" alt="ultraformer" width="100%">
 					</a>
 				</div>
