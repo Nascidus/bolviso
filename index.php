@@ -139,14 +139,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 	
 	<title><?php echo"$titulo";?></title>
-	<meta name="description" content="<?php echo"$texto_busca";?>"/>
+	<?php 
+	// Meta description com fallback caso texto_busca esteja vazio
+	$meta_description = !empty($texto_busca) ? $texto_busca : 'Clínica Bel Viso - Especialistas em Estética, Odontologia e Bem-estar em Goiânia. Agende sua consulta!';
+	?>
+	<meta name="description" content="<?php echo htmlspecialchars($meta_description, ENT_QUOTES, 'UTF-8'); ?>"/>
+	
+	<?php
+	// Meta tags essenciais para SEO
+	// Keywords baseadas em serviços e localização
+	$keywords_base = 'odontologia, estética facial, clínica dental, implantes dentários, dentista, tratamento estético';
+	$keywords_local = !empty($cidade) ? $cidade : 'Goiânia';
+	$keywords_estado = !empty($estado) ? $estado : 'Goiás';
+	$meta_keywords = $keywords_base . ', ' . $keywords_local . ', ' . $keywords_estado . ', clínica odontológica, estética facial ' . $keywords_local;
+	
+	// Canonical URL
+	$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+	$canonical_url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	// Remove query strings para canonical
+	$canonical_url = strtok($canonical_url, '?');
+	?>
+	
+	<!-- Meta Tags Essenciais para SEO -->
+	<meta name="keywords" content="<?php echo htmlspecialchars($meta_keywords, ENT_QUOTES, 'UTF-8'); ?>">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="language" content="Portuguese">
+	<meta http-equiv="content-language" content="pt-BR">
+	<link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <meta name="author" content="Clínica Bel Viso">    
     <link rel="shortcut icon" href="assets/images/marca.png" type="image/x-icon" />
     
     <!-- Google Font -->
@@ -253,6 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<section id="servicos">
 		<div class="container">
+			<h2 class="section-heading text-center mb-4">Nossos Serviços Especializados</h2>
 			<div class="row">
 
 				<div class="col-lg-6 col-sm-12">
@@ -281,8 +307,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-8">
-					<h1>Diagnóstico Inicial e Conclusão do Tratamento</h1>
-					<p>Confira alguns resultados de tratamentos</p>
+					<h2>Diagnóstico Inicial e Conclusão do Tratamento</h2>
+					<h3 class="mb-3">Confira alguns resultados de tratamentos</h3>
 	
 					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 	
@@ -430,7 +456,7 @@ if ($conn->query($sql) === TRUE) {
 	    <div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-3">
-					<h1>Quer receber<br> nosso contato?</h1>
+					<h2>Quer receber<br> nosso contato?</h2>
 					<p>Preencha os campos que retornaremos!</p>
 				</div>
 
