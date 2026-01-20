@@ -230,10 +230,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container-fluid position-relative py-5">
                 <div class="container logo-wrapper">
 	                <div class="row">
-						<div class="col-6 site-logo"><a class="navbar-brand" href="index.php"><img class="logo-icon me-2" src="assets/images/logo-arisya.png" alt="logo" ></a></div>
+						<div class="col-6 site-logo"><a class="navbar-brand" href="index.php"><img class="logo-icon me-2" src="assets/images/logo-arisya.png" alt="logo" decoding="async" fetchpriority="high"></a></div>
 						<div class="col-6 site-icon">
-					     	<a href="<?php echo"$whatsapp_link";?>"><img src="assets/images/whatsapp.png" alt=""></a>
-							<a href="<?php echo"$instagram_link";?>"><img src="assets/images/instagram.png" alt=""></a>
+					     	<a href="<?php echo"$whatsapp_link";?>"><img src="assets/images/whatsapp.png" alt="" loading="eager" decoding="async"></a>
+							<a href="<?php echo"$instagram_link";?>"><img src="assets/images/instagram.png" alt="" loading="eager" decoding="async"></a>
 						</div> 
 					</div>
                 </div><!--//docs-logo-wrapper-->
@@ -241,6 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div><!--//container-->
         </div><!--//branding-->
     </header><!--//header-->
+
     
     <section class="hero-section">
 	    <div class="container">
@@ -266,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			    </div><!--col-->
 			    <div class="col-lg-6 col-sm-12 align-self-center">
 				    <div class="book-cover-holder">
-					    <img class="img-fluid book-cover" src="assets/images/avatar.png" alt="book cover" >
+					    <img class="img-fluid book-cover" src="assets/images/avatar.png" alt="book cover" loading="eager" decoding="async" fetchpriority="high">
 					    
 				    </div><!--//book-cover-holder-->
 
@@ -284,7 +285,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="col-lg-6 col-sm-12">
 					<div class="caixa-img">
 						<a href="<?php echo"$whatsapp_link";?>">
-							<img src="assets/images/camada-1.jpg" alt="DTM - Disfunção Temporomandibular" width="100%">
+							<img src="assets/images/camada-1.jpg" alt="DTM - Disfunção Temporomandibular" width="100%" loading="lazy" decoding="async">
 						</a>
 					</div>
 				</div>
@@ -292,7 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="col-lg-6 col-sm-12">
 					<div class="caixa-img">
 						<a href="<?php echo"$whatsapp_link";?>">
-							<img src="assets/images/camada-2.jpg" alt="Lentes de Contato" width="100%">
+							<img src="assets/images/camada-2.jpg" alt="Lentes de Contato" width="100%" loading="lazy" decoding="async">
 						</a>
 					</div>
 				</div>
@@ -328,16 +329,18 @@ $posicao = $res['posicao'];
 $categoria = $res['categoria'];
 $link = $res['link'];
 $active_class = $first ? 'active' : '';
+$img_loading = $first ? 'eager' : 'lazy';
+$img_fetchpriority = $first ? 'high' : 'auto';
 $first = false;
 echo"
 							<div class=\"carousel-item $active_class\">
 		
 								<a href=\"$whatsapp_link\">
-									<img id=\"sliddesktop\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\">
+									<img id=\"sliddesktop\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\" loading=\"$img_loading\" decoding=\"async\" fetchpriority=\"$img_fetchpriority\">
 								</a>
 		
 								<a href=\"$whatsapp_link\">
-									<img id=\"slidmobile\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\">
+									<img id=\"slidmobile\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\" loading=\"$img_loading\" decoding=\"async\" fetchpriority=\"$img_fetchpriority\">
 								</a>
 							</div>
 "; 		}
@@ -348,13 +351,13 @@ echo"
 						</div>
 						<a id="setadesk" class="carousel-control-prev" href="#carouselExampleControls" role="button"
 							data-slide="prev">
-							<span class="carousel-control-prev" aria-hidden="true"><img src="assets/images/seta-esquerda.png"
+							<span class="carousel-control-prev" aria-hidden="true"><img src="assets/images/seta-esquerda.png" loading="lazy" decoding="async"
 									alt=""></span>
 							<span class="sr-only">Previous</span>
 						</a>
 						<a id="setadesk" class="carousel-control-next" href="#carouselExampleControls" role="button"
 							data-slide="next">
-							<span class="carousel-control-next" aria-hidden="true"><img src="assets/images/seta-direita.png"
+							<span class="carousel-control-next" aria-hidden="true"><img src="assets/images/seta-direita.png" loading="lazy" decoding="async"
 									alt=""></span>
 							<span class="sr-only">Next</span>
 						</a>
@@ -366,7 +369,7 @@ echo"
 
 				<div class="col-lg-4 agendamento">
 					<a href="<?php echo"$whatsapp_link";?>">
-						<img src="assets/images/aparelho-ultraformer.png" alt="ultraformer" width="100%">
+						<img src="assets/images/aparelho-ultraformer.png" alt="ultraformer" width="100%" loading="lazy" decoding="async">
 					</a>
 				</div>
 
@@ -401,7 +404,7 @@ echo"
 			    <div class=\"item col-12 col-md-6 col-lg-4\">
 				    <div class=\"item-inner p-3 p-lg-4\">
 					    <div class=\"item-header mb-3\">
-						    <div class=\"item-icon\"><img src=\"assets/images/marca.png\" alt=\"\"></div>
+						    <div class=\"item-icon\"><img src=\"assets/images/marca.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></div>
 						    <h3 class=\"item-heading\">$titulo</h3>
 					    </div><!--//item-heading-->
 					    <div class=\"item-desc\">
@@ -420,6 +423,127 @@ echo"
     </section><!--//benefits-section-->
     
  
+	<?php
+	// ============================================================
+	// SEO: Conteúdo + Palavras-chave (FAQ) + Schema.org FAQPage
+	// ============================================================
+	$faq_city = !empty($cidade) ? $cidade : 'Goiânia';
+	$faq_state = !empty($estado) ? $estado : 'GO';
+	$faq_address = trim((string)($endereco ?? ''));
+	$faq_location_line = !empty($faq_address) ? ($faq_address . ' - ' . $faq_city . '/' . $faq_state) : ($faq_city . '/' . $faq_state);
+	$faq_whatsapp = !empty($whatsapp_link) ? $whatsapp_link : '#';
+
+	$faq_items = [
+		[
+			'q' => 'Onde fica a Clínica Bel Viso?',
+			'a_text' => 'Estamos localizados em ' . $faq_location_line . '. Para orientações e localização atualizada, fale com a equipe pelo WhatsApp.',
+			'a_html' => '<p>Estamos localizados em <strong>' . htmlspecialchars($faq_location_line, ENT_QUOTES, 'UTF-8') . '</strong>.</p><p>Para orientações e localização atualizada, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
+		],
+		[
+			'q' => 'Como agendar uma avaliação?',
+			'a_text' => 'Você pode agendar sua avaliação pelo WhatsApp. Envie seu nome e o tratamento de interesse (ex.: lentes de contato dental, clareamento, bioestimulador, botox) e a equipe orienta os horários disponíveis.',
+			'a_html' => '<p>Você pode agendar sua avaliação pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p><p>Envie seu nome e o tratamento de interesse (ex.: <strong>lentes de contato dental</strong>, <strong>clareamento</strong>, <strong>bioestimulador</strong>, <strong>toxina botulínica</strong>) e a equipe orienta os horários disponíveis.</p>',
+		],
+		[
+			'q' => 'Quais tratamentos de Estética facial a clínica realiza?',
+			'a_text' => 'Atuamos com procedimentos como bioestimulador de colágeno (Sculptra/ácido polilático e hidroxiapatita), preenchimentos faciais com ácido hialurônico, fios de sustentação (PDO), ultrassom microfocado, toxina botulínica e peelings Line Skin (Hard, Aging, Melan).',
+			'a_html' => '<p>Atuamos com procedimentos de <strong>Estética facial</strong> como:</p><ul><li><strong>Bioestimulador de colágeno</strong> (ex.: ácido polilático/Sculptra e hidroxiapatita de cálcio)</li><li><strong>Preenchimentos faciais</strong> com ácido hialurônico (malar, olheiras, mandíbula, lábios, etc.)</li><li><strong>Fios de sustentação</strong> (PDO)</li><li><strong>Ultrassom microfocado</strong></li><li><strong>Toxina botulínica</strong></li><li><strong>Peelings Line Skin</strong> (Hard, Aging e Melan)</li></ul><p>Na avaliação, indicamos o melhor protocolo para seu objetivo.</p>',
+		],
+		[
+			'q' => 'Como funciona o clareamento dental? Quanto tempo leva?',
+			'a_text' => 'O clareamento dental costuma levar cerca de 21 dias (podendo variar). O clareamento combinado (em casa + consultório) pode potencializar o resultado, trazendo um sorriso mais branco com estabilidade de cor.',
+			'a_html' => '<p>O <strong>clareamento dental</strong> costuma levar cerca de <strong>21 dias</strong> (podendo variar de acordo com a técnica e o caso).</p><p>O clareamento <strong>combinado</strong> (em casa + consultório) pode potencializar o resultado: o consultório traz resultado mais rápido e o caseiro ajuda na estabilidade e durabilidade da cor.</p>',
+		],
+		[
+			'q' => 'Como funciona o tratamento com lentes de contato dental?',
+			'a_text' => 'Lentes de contato dental são lâminas finas de cerâmica que podem mudar tamanho, formato e cor dos dentes. O processo inclui planejamento, escaneamento intraoral, fotos, desenho 3D e teste virtual antes da finalização.',
+			'a_html' => '<p><strong>Lentes de contato dental</strong> são lâminas finas de cerâmica que podem transformar o sorriso, ajustando tamanho, formato e cor dos dentes.</p><p>O processo envolve planejamento com <strong>scanner intra-oral</strong>, fotos, <strong>desenho 3D</strong> e teste virtual antes da finalização — e você participa da escolha de formato e cor.</p>',
+		],
+		[
+			'q' => 'Como funcionam os implantes dentários?',
+			'a_text' => 'Implantes dentários são pinos de titânio biocompatíveis que se integram ao osso para substituir dentes perdidos. A prótese é a parte visível. Em alguns casos, podem ser necessários enxertos ósseos e/ou gengivais para o sucesso do tratamento.',
+			'a_html' => '<p><strong>Implantes dentários</strong> são pinos de titânio biocompatíveis que se integram ao osso para substituir dentes perdidos.</p><p>A prótese é a parte visível e pode devolver função e estética. Em alguns casos, podem ser necessários <strong>enxertos ósseos</strong> e/ou <strong>gengivais</strong> para o sucesso do tratamento.</p>',
+		],
+		[
+			'q' => 'O que é cirurgia gengival e quando é indicada?',
+			'a_text' => 'A cirurgia gengival (periodontia) remove excesso de tecido e melhora a harmonia do sorriso, podendo reduzir a exposição gengival. Pode ser indicada isoladamente ou combinada com lentes de contato dental, conforme avaliação.',
+			'a_html' => '<p>A <strong>cirurgia gengival</strong> (periodontia) remove excesso de tecido e melhora a harmonia do sorriso, podendo reduzir a exposição gengival.</p><p>Pode ser indicada isoladamente ou combinada com <strong>lentes de contato dental</strong>, conforme avaliação.</p>',
+		],
+		[
+			'q' => 'Quais tipos de prótese dentária existem?',
+			'a_text' => 'A prótese dentária pode ser fixa ou removível e pode substituir dentes/tecidos perdidos. Pode ser feita em resina acrílica (temporárias) ou cerâmica/porcelana (permanentes), apoiada em dentes, implantes ou mucosa, conforme o caso.',
+			'a_html' => '<p>A <strong>prótese dentária</strong> pode ser <strong>fixa</strong> ou <strong>removível</strong> e substitui dentes/tecidos perdidos.</p><p>Pode ser feita em <strong>resina acrílica</strong> (temporárias) ou <strong>cerâmica/porcelana</strong> (permanentes), apoiada em dentes, implantes ou mucosa, conforme o caso.</p>',
+		],
+		[
+			'q' => 'A clínica atende convênios?',
+			'a_text' => 'Para informações atualizadas sobre convênios, formas de pagamento e condições, entre em contato com a equipe pelo WhatsApp.',
+			'a_html' => '<p>Para informações atualizadas sobre <strong>convênios</strong>, formas de pagamento e condições, entre em contato com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
+		],
+		[
+			'q' => 'Como funciona a primeira avaliação?',
+			'a_text' => 'Na primeira avaliação, a equipe entende sua necessidade, analisa o caso e recomenda as opções de tratamento. Quando necessário, são solicitados exames e definido um plano de cuidado.',
+			'a_html' => '<p>Na primeira avaliação, a equipe entende sua necessidade, analisa o caso e recomenda as opções de tratamento.</p><p>Quando necessário, são solicitados exames e definido um plano de cuidado.</p>',
+		],
+		[
+			'q' => 'Qual é o horário de atendimento?',
+			'a_text' => 'Os horários podem variar. Para confirmar horários disponíveis e agendar, fale com a equipe pelo WhatsApp.',
+			'a_html' => '<p>Os horários podem variar.</p><p>Para confirmar horários disponíveis e agendar, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
+		],
+	];
+
+	$faq_schema = [
+		'@context' => 'https://schema.org',
+		'@type' => 'FAQPage',
+		'mainEntity' => array_map(function ($item) {
+			return [
+				'@type' => 'Question',
+				'name' => $item['q'],
+				'acceptedAnswer' => [
+					'@type' => 'Answer',
+					'text' => $item['a_text'],
+				],
+			];
+		}, $faq_items),
+	];
+	?>
+
+	<script type="application/ld+json"><?php echo json_encode($faq_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
+
+	<section id="faq-section" class="faq-section theme-bg-light-gradient py-5">
+		<div class="container py-5">
+			<h2 class="section-heading mb-3">Perguntas frequentes</h2>
+			<p class="mb-4">Confira respostas rápidas sobre agendamento, localização e atendimentos. Se preferir, fale com a equipe pelo WhatsApp.</p>
+
+			<div id="faqAccordion" class="accordion">
+				<?php foreach ($faq_items as $idx => $item): $i = $idx + 1; $isOpen = ($i === 1); ?>
+					<div class="card faq-card">
+						<div class="card-header faq-card-header" id="faqHeading<?php echo $i; ?>">
+							<h3 class="mb-0 faq-question">
+								<button class="btn btn-link faq-toggle <?php echo $isOpen ? '' : 'collapsed'; ?>"
+									type="button"
+									data-toggle="collapse"
+									data-target="#faqCollapse<?php echo $i; ?>"
+									aria-expanded="<?php echo $isOpen ? 'true' : 'false'; ?>"
+									aria-controls="faqCollapse<?php echo $i; ?>">
+									<?php echo htmlspecialchars($item['q'], ENT_QUOTES, 'UTF-8'); ?>
+								</button>
+							</h3>
+						</div>
+
+						<div id="faqCollapse<?php echo $i; ?>"
+							class="collapse <?php echo $isOpen ? 'show' : ''; ?>"
+							aria-labelledby="faqHeading<?php echo $i; ?>"
+							data-parent="#faqAccordion">
+							<div class="card-body faq-card-body">
+								<?php echo $item['a_html']; ?>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div><!--//container-->
+	</section><!--//faq-section-->
+	
 	
 	
 <?php
@@ -513,7 +637,7 @@ echo"
 					   
 				        <div class=\"source row gx-md-3 gy-3 gy-md-0\">
 					        <div class=\"col-12 col-md-auto text-center text-md-start\">
-					            <img class=\"source-profile\" src=\"assets/images/profiles/profile-1.png\" alt=\"image\">
+					            <img class=\"source-profile\" src=\"assets/images/profiles/profile-1.png\" alt=\"image\" loading=\"lazy\" decoding=\"async\">
 					        </div><!--//col-->
 					        <div class=\"col source-info text-center text-md-start\">
 						        <div class=\"source-name\">$nome</div>
@@ -540,17 +664,56 @@ echo"
     
 
     <footer class="footer">
-
 		<div class="container">
+			<div class="row footer-sitemap">
+				<div class="col-12 col-lg-4 mb-4 mb-lg-0">
+					<div class="footer-title">Mapa do site</div>
+					<ul class="footer-links">
+						<li><a href="#servicos">Serviços</a></li>
+						<li><a href="#antesdepois">Resultados (Antes e Depois)</a></li>
+						<li><a href="#benefits-section">Outros Tratamentos</a></li>
+						<li><a href="#faq-section">Perguntas frequentes</a></li>
+						<li><a href="#form-section">Contato</a></li>
+						<li><a href="#reviews-section">Depoimentos</a></li>
+					</ul>
+				</div>
+
+				<div class="col-12 col-lg-4 mb-4 mb-lg-0">
+					<div class="footer-title">Links rápidos</div>
+					<ul class="footer-links">
+						<li><a href="<?php echo htmlspecialchars($whatsapp_link, ENT_QUOTES, 'UTF-8'); ?>">WhatsApp</a></li>
+						<li><a href="<?php echo htmlspecialchars($instagram_link, ENT_QUOTES, 'UTF-8'); ?>">Instagram</a></li>
+						<?php if (!empty($facebook_link) && $facebook_link !== '#'): ?>
+							<li><a href="<?php echo htmlspecialchars($facebook_link, ENT_QUOTES, 'UTF-8'); ?>">Facebook</a></li>
+						<?php endif; ?>
+						<?php if (!empty($linkedin_link) && $linkedin_link !== '#'): ?>
+							<li><a href="<?php echo htmlspecialchars($linkedin_link, ENT_QUOTES, 'UTF-8'); ?>">LinkedIn</a></li>
+						<?php endif; ?>
+					</ul>
+				</div>
+
+				<div class="col-12 col-lg-4">
+					<div class="footer-title">Clínica Bel Viso</div>
+					<div class="footer-text">
+						<?php if (!empty($endereco)): ?>
+							<div class="footer-line"><?php echo htmlspecialchars($endereco, ENT_QUOTES, 'UTF-8'); ?></div>
+						<?php endif; ?>
+						<?php if (!empty($cidade) || !empty($estado)): ?>
+							<div class="footer-line"><?php echo htmlspecialchars(trim(($cidade ?? '') . (empty($estado) ? '' : ' / ' . $estado)), ENT_QUOTES, 'UTF-8'); ?></div>
+						<?php endif; ?>
+						<?php if (!empty($telefone1) || !empty($telefone2)): ?>
+							<div class="footer-line"><?php echo htmlspecialchars(trim(($telefone1 ?? '') . (empty($telefone2) ? '' : ' | ' . $telefone2)), ENT_QUOTES, 'UTF-8'); ?></div>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+
 			<div class="row">
-				<div id="direitos" class="col-lg-6 col-sm-12">
+				<div id="direitos" class="col-12">
 					<p>Todos direitos são reservados - Clínica Bel Viso</p>
 				</div>
-				
-	  
 			</div>
 		</div>
-	    
     </footer>
        
     <!-- Javascript -->  

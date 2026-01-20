@@ -43,6 +43,15 @@ header{ border-top: 8px solid #b97963;}
 footer{background-color: #66463b;}
 #direitos{color: #fff; padding-top: 10px;}
 #direitos p{font-family: 'Alexandria', sans-serif; font-size: 18px; font-weight: 300; padding: 10px 0 10px 0;}
+
+/* Footer sitemap */
+.footer .footer-title{color: #fff; font-weight: 700; margin: 18px 0 10px 0;}
+.footer .footer-links{list-style: none; padding-left: 0; margin: 0;}
+.footer .footer-links li{margin-bottom: 8px;}
+.footer .footer-links a{color: rgba(255,255,255,0.9); text-decoration: none;}
+.footer .footer-links a:hover{color: #e9cf9f; text-decoration: underline;}
+.footer .footer-text{color: rgba(255,255,255,0.9); font-size: 14px;}
+.footer .footer-line{margin-bottom: 6px;}
 #logo-as{text-align: right; padding-top: 20px;}
 #logo-as img{ width: 10%;}
 .contato{padding-bottom: 30px;}
@@ -51,6 +60,16 @@ footer{background-color: #66463b;}
 .center-barra{display: flex; align-items: center; justify-content: center;}
 .barra{background-color: #e1e1e7; height: 5px; border-radius: 2rem; width: 20%;}
 #servicos{padding: 20px 0 20px 0;}
+
+/* FAQ */
+#faq-section .faq-card{border: none; border-radius: 0.75rem; overflow: hidden; margin-bottom: 12px; box-shadow: 0 10px 20px -14px rgba(0,0,0,0.18);}
+#faq-section .faq-card-header{background: #fff; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 0;}
+#faq-section .faq-toggle{display: block; width: 100%; text-align: left; padding: 16px 18px; font-weight: 700; color: #585858; text-decoration: none;}
+#faq-section .faq-toggle:hover{color: #b97970; text-decoration: none;}
+#faq-section .faq-toggle:focus{outline: none; box-shadow: none;}
+#faq-section .faq-card-body{background: #fff; color: #585858; padding: 16px 18px;}
+#faq-section .faq-card-body p{margin-bottom: 10px;}
+#faq-section .faq-card-body p:last-child{margin-bottom: 0;}
 
 
 @media screen and (max-width: 1366px){
