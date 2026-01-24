@@ -432,12 +432,16 @@ echo"
 	$faq_address = trim((string)($endereco ?? ''));
 	$faq_location_line = !empty($faq_address) ? ($faq_address . ' - ' . $faq_city . '/' . $faq_state) : ($faq_city . '/' . $faq_state);
 	$faq_whatsapp = !empty($whatsapp_link) ? $whatsapp_link : '#';
+	$faq_localizacao = 'Estamos localizados no maior complexo de saúde em Goiânia, o Orion Business & Health Complex.';
+	if (!empty($faq_address)) {
+		$faq_localizacao .= ' Em ' . $faq_location_line . '.';
+	}
 
 	$faq_items = [
 		[
 			'q' => 'Onde fica a Clínica Bel Viso?',
-			'a_text' => 'Estamos localizados em ' . $faq_location_line . '. Para orientações e localização atualizada, fale com a equipe pelo WhatsApp.',
-			'a_html' => '<p>Estamos localizados em <strong>' . htmlspecialchars($faq_location_line, ENT_QUOTES, 'UTF-8') . '</strong>.</p><p>Para orientações e localização atualizada, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
+			'a_text' => $faq_localizacao . ' Para orientações e localização atualizada, fale com a equipe pelo WhatsApp.',
+			'a_html' => '<p>' . htmlspecialchars($faq_localizacao, ENT_QUOTES, 'UTF-8') . '</p><p>Para orientações e localização atualizada, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
 		],
 		[
 			'q' => 'Como agendar uma avaliação?',
