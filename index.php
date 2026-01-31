@@ -660,6 +660,7 @@ echo"
 // Avaliações do Google Meu Negócio (via Places API)
 require_once __DIR__ . '/as/google-reviews.php';
 $google_reviews = get_google_reviews();
+?><!-- DEBUG: Google reviews count: <?php echo count($google_reviews); ?> --><?php
 foreach ($google_reviews as $rev):
 	$rev_author = htmlspecialchars($rev['author_name'] ?? 'Avaliador', ENT_QUOTES, 'UTF-8');
 	$rev_text = nl2br(htmlspecialchars($rev['text'] ?? '', ENT_QUOTES, 'UTF-8'));

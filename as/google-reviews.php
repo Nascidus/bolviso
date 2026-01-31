@@ -12,6 +12,24 @@
 function get_google_reviews() {
 	$placeId = $_ENV['GOOGLE_PLACE_ID'] ?? '';
 	$apiKey = $_ENV['GOOGLE_PLACES_API_KEY'] ?? '';
+	// Fallback: carrega .env se variáveis vazias (alguns hosts não populam $_ENV corretamente)
+	if (empty($placeId) || empty($apiKey)) {
+		$envFile = __DIR__ . '/../.env';
+		if (file_exists($envFile)) {
+			$lines = @file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+			if (is_array($lines)) {
+				foreach ($lines as $line) {
+					if (strpos(trim($line), '#') === 0) continue;
+					if (strpos($line, '=') !== false) {
+						list($k, $v) = explode('=', $line, 2);
+						$_ENV[trim($k)] = trim($v);
+					}
+				}
+				$placeId = $_ENV['GOOGLE_PLACE_ID'] ?? '';
+				$apiKey = $_ENV['GOOGLE_PLACES_API_KEY'] ?? '';
+			}
+		}
+	}
 	if (empty($placeId) || empty($apiKey)) {
 		return [];
 	}
