@@ -649,13 +649,48 @@ echo"
 				        </div><!--//source-->
 						<blockquote class=\"quote\">
 					        $depoimento   
-				        </blockquote><!--//item-->
+						</blockquote><!--//item-->
 				        <div class=\"icon-holder\"><i class=\"fas fa-quote-right\"></i></div>
 				    </div><!--//inner-->
 			    </div><!--//item-->
 "; 		}
 	}
-}?>
+}
+
+// Avaliações do Google Meu Negócio (via Places API)
+require_once __DIR__ . '/as/google-reviews.php';
+$google_reviews = get_google_reviews();
+foreach ($google_reviews as $rev):
+	$rev_author = htmlspecialchars($rev['author_name'] ?? 'Avaliador', ENT_QUOTES, 'UTF-8');
+	$rev_text = nl2br(htmlspecialchars($rev['text'] ?? '', ENT_QUOTES, 'UTF-8'));
+	$rev_rating = (int)($rev['rating'] ?? 0);
+	$rev_time = htmlspecialchars($rev['relative_time'] ?? '', ENT_QUOTES, 'UTF-8');
+	if (empty($rev_text)) continue;
+	$stars = '';
+	for ($i = 0; $i < 5; $i++) {
+		$stars .= $i < $rev_rating ? '<i class="fas fa-star text-warning"></i>' : '<i class="far fa-star text-warning"></i>';
+	}
+?>
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4 google-review-card">
+				        <div class="source row gx-md-3 gy-3 gy-md-0">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="assets/images/profiles/profile-1.png" alt="<?php echo $rev_author; ?>" loading="lazy" decoding="async">
+					        </div>
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name"><?php echo $rev_author; ?></div>
+						        <div class="google-review-meta">
+						            <span class="google-stars"><?php echo $stars; ?></span>
+						            <?php if ($rev_time): ?><span class="google-time"> · <?php echo $rev_time; ?></span><?php endif; ?>
+						            <span class="google-badge">Google</span>
+						        </div>
+						    </div>
+				        </div>
+						<blockquote class="quote"><?php echo $rev_text; ?></blockquote>
+				        <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div>
+			    </div>
+<?php endforeach; ?>
 
 				
 		    </div><!--//row-->

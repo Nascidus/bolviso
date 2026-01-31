@@ -1,10 +1,24 @@
 <?php
 session_start();
 if((!isset($_SESSION['login']))
-AND (!isset($_SESSION['senha'])))
-Header("Location: index.php?erro=logar");
+AND (!isset($_SESSION['senha']))) {
+    header("Location: /as/index.php?erro=logar");
+    exit();
+}
 $login = $_SESSION['login'];
 $senha = $_SESSION['senha'];  
+include'conecta.php';
+
+// Processa delete ANTES de qualquer output (evita cache e garante execução)
+$acao = $_GET['acao'] ?? '';
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+if ($acao === 'remove' && $id > 0 && $conn) {
+    $sql = "DELETE FROM depoimentos WHERE id = " . $id;
+    if (mysqli_query($conn, $sql)) {
+        header("Location: /as/depoimentos.php?msg=removido");
+        exit();
+    }
+}
 ?>
 <!doctype html>
 <html>
@@ -51,6 +65,7 @@ echo"<div class=\"alinha14\">DEPOIMENTOS ($linhas)</div>";?>
 
 $sql = "SELECT * FROM depoimentos ORDER BY id DESC";
 $comando = mysqli_query($conn, $sql);
+$i = 0;
 while($res = mysqli_fetch_assoc($comando)){
 
 $id = $res ['id'];
@@ -78,9 +93,9 @@ echo"
 
 <div id=\"grid12F\"><div id=\"painel-banner-listagemIcon-center\">
 
-<div class=\"painel-banner-listagem-icon\"><a href='depoimentos?acao=remove&id=$id' onclick=\"return confirm('Certeza que deseja excluir?');\"><img src=\"img/excluir2.png\"/></a></div>
+<div class=\"painel-banner-listagem-icon\"><a href=\"/as/depoimentos.php?acao=remove&id=$id\" onclick=\"return confirm('Certeza que deseja excluir?');\"><img src=\"img/excluir2.png\"/></a></div>
 
-<div class=\"painel-banner-listagem-icon\"><a href=\"depoimentos-editar?id=$id\"><img src=\"img/editar2.png\"/></a></div>
+<div class=\"painel-banner-listagem-icon\"><a href=\"/as/depoimentos-editar.php?id=$id\"><img src=\"img/editar2.png\"/></a></div>
 </div></div>
 
 
@@ -116,18 +131,13 @@ echo"
 	
 	
 	
-	
 <?php
-$acao = $_GET['acao'];
-$id = $_GET['id'];
-if ($acao == 'remove'){
-$sql = "DELETE FROM `depoimentos` WHERE id = $id";
-$comando = mysqli_query($conn, $sql);;
-
-if ($conn->query($sql) === TRUE) {
-echo "<script language='javascript'>function alerta(){alert('Removido com sucesso!'); }alerta();document.location='javascript:history.go(-1)';</script>";
-}}?>
-
+if (isset($_GET['msg']) && $_GET['msg'] === 'removido'): ?>
+<script>
+alert('Depoimento removido com sucesso!');
+history.replaceState({}, '', '/as/depoimentos.php');
+</script>
+<?php endif; ?>
 
 </body>
 </html>

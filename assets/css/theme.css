@@ -56,6 +56,9 @@ footer{background-color: #66463b;}
 #logo-as img{ width: 10%;}
 .contato{padding-bottom: 30px;}
 .source-name{padding: 22px; font-size: 18px; color: #b97970; font-weight: bold;}
+.google-review-meta{font-size: 14px; color: #888; margin-top: 4px;}
+.google-stars{margin-right: 4px;}
+.google-badge{display: inline-block; background: #4285f4; color: #fff; font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-left: 8px;}
 .agendamento{display: flex; align-items: center; justify-content: center; align-self: center; padding-top: 30px;}
 .center-barra{display: flex; align-items: center; justify-content: center;}
 .barra{background-color: #e1e1e7; height: 5px; border-radius: 2rem; width: 20%;}
