@@ -445,7 +445,7 @@ echo"
 		],
 		[
 			'q' => 'Como agendar uma avaliação?',
-			'a_text' => 'Você pode agendar sua avaliação pelo WhatsApp. Envie seu nome e o tratamento de interesse (ex.: lentes de contato dental, clareamento, bioestimulador, botox) e a equipe orienta os horários disponíveis.',
+			'a_text' => 'Você pode agendar sua avaliação pelo WhatsApp. Envie seu nome e o tratamento de interesse (ex.: lentes de contato dental, clareamento, bioestimulador, toxina botulínica) e a equipe orienta os horários disponíveis.',
 			'a_html' => '<p>Você pode agendar sua avaliação pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p><p>Envie seu nome e o tratamento de interesse (ex.: <strong>lentes de contato dental</strong>, <strong>clareamento</strong>, <strong>bioestimulador</strong>, <strong>toxina botulínica</strong>) e a equipe orienta os horários disponíveis.</p>',
 		],
 		[

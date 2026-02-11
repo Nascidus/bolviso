@@ -1,5 +1,15 @@
 <?php
 /**
+ * Remove avaliações cujo texto contenha "botox" (política Google Ads).
+ */
+function get_google_reviews_filter_botox(array $reviews) {
+	return array_values(array_filter($reviews, function ($r) {
+		$text = $r['text'] ?? '';
+		return stripos($text, 'botox') === false;
+	}));
+}
+
+/**
  * Busca avaliações do Google Meu Negócio via Places API (New).
  * Usa cache de 6 horas para reduzir requisições à API.
  *
@@ -41,7 +51,7 @@ function get_google_reviews() {
 		if ($cached !== false) {
 			$data = json_decode($cached, true);
 			if (is_array($data)) {
-				return $data;
+				return get_google_reviews_filter_botox($data);
 			}
 		}
 	}
@@ -79,6 +89,10 @@ function get_google_reviews() {
 		$rating = isset($r['rating']) ? (int) $r['rating'] : 0;
 		$relativeTime = $r['relativePublishTimeDescription'] ?? '';
 		$publishTime = $r['publishTime'] ?? '';
+		// Oculta avaliações que contenham "botox" (política Google Ads)
+		if (stripos($text, 'botox') !== false) {
+			continue;
+		}
 		$out[] = [
 			'author_name' => $author,
 			'text' => $text,
