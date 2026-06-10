@@ -138,20 +138,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PZMDPFGT');</script>
 <!-- End Google Tag Manager -->
 	
-	<title><?php echo"$titulo";?></title>
-	<?php 
-	// Meta description com fallback caso texto_busca esteja vazio
-	$meta_description = !empty($texto_busca) ? $texto_busca : 'Clínica Bel Viso - Especialistas em Estética, Odontologia e Bem-estar em Goiânia. Agende sua consulta!';
+	<?php
+	// SEO: título e description otimizados (Search Console – Consultas.csv)
+	$seo_city = !empty($cidade) ? $cidade : 'Goiânia';
+	$seo_state = !empty($estado) ? $estado : 'GO';
+	$seo_title = 'Clínica Bel Viso | Odontologia e Estética em ' . $seo_city;
+	$seo_description_default = 'Clínica Bel Viso em ' . $seo_city . ': odontologia, estética facial e bem-estar. Lentes, clareamento, implantes e avaliação personalizada. Agende pelo WhatsApp.';
+	$texto_busca_trim = trim(strip_tags((string) $texto_busca));
+	if (!empty($texto_busca_trim) && mb_strlen($texto_busca_trim) <= 160) {
+		$meta_description = $texto_busca_trim;
+	} else {
+		$meta_description = $seo_description_default;
+	}
 	?>
+	<title><?php echo htmlspecialchars($seo_title, ENT_QUOTES, 'UTF-8'); ?></title>
 	<meta name="description" content="<?php echo htmlspecialchars($meta_description, ENT_QUOTES, 'UTF-8'); ?>"/>
 	
 	<?php
 	// Meta tags essenciais para SEO
-	// Keywords baseadas em serviços e localização
-	$keywords_base = 'odontologia, estética facial, clínica dental, implantes dentários, dentista, tratamento estético';
-	$keywords_local = !empty($cidade) ? $cidade : 'Goiânia';
-	$keywords_estado = !empty($estado) ? $estado : 'Goiás';
-	$meta_keywords = $keywords_base . ', ' . $keywords_local . ', ' . $keywords_estado . ', clínica odontológica, estética facial ' . $keywords_local;
+	// Keywords: termos do Search Console + serviços e localização
+	$keywords_base = 'clínica bel viso, bel viso, belviso, odontologia estética, estética facial, clínica dental, implantes dentários';
+	$keywords_local = $seo_city;
+	$keywords_estado = $seo_state;
+	$meta_keywords = $keywords_base . ', odontologia estética em ' . $keywords_local . ', odontologia estética ' . $keywords_local . ', ' . $keywords_estado . ', dentista ' . $keywords_local;
 	
 	// Canonical URL
 	$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
@@ -249,9 +258,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			    <div class="col-lg-6 col-sm-12 pt-5  align-self-center">
 				    <div class="promo pe-md-3 pe-lg-5">
 					    <h1 class="headline mb-3">
-						    Especialistas em Estética,<br> Odontologia e Bem-estar!
+						    Clínica Bel Viso: Especialistas em Estética,<br> Odontologia e Bem-estar em <?php echo htmlspecialchars($seo_city, ENT_QUOTES, 'UTF-8'); ?>!
 					    </h1><!--//headline-->
-						<p>Cuide da sua saúde bucal e autoestima conosco</p>
+						<p>Odontologia estética e cuidado integral com sua saúde bucal e autoestima</p>
 					    <div class="subheadline mb-4">
 						<?php echo"$texto_institucional";?>						    
 					    </div><!--//subheading-->
@@ -439,6 +448,11 @@ echo"
 
 	$faq_items = [
 		[
+			'q' => 'A Clínica Bel Viso faz odontologia estética em ' . $faq_city . '?',
+			'a_text' => 'Sim. A Clínica Bel Viso atua com odontologia estética em ' . $faq_city . ', oferecendo tratamentos como lentes de contato dental, clareamento, implantes, próteses e harmonização do sorriso, além de procedimentos de estética facial.',
+			'a_html' => '<p>Sim. A <strong>Clínica Bel Viso</strong> atua com <strong>odontologia estética em ' . htmlspecialchars($faq_city, ENT_QUOTES, 'UTF-8') . '</strong>, oferecendo tratamentos como:</p><ul><li><strong>Lentes de contato dental</strong></li><li><strong>Clareamento</strong></li><li><strong>Implantes e próteses</strong></li><li><strong>Harmonização do sorriso</strong></li><li><strong>Estética facial</strong></li></ul><p>Na avaliação, a equipe indica o melhor plano para o seu objetivo.</p>',
+		],
+		[
 			'q' => 'Onde fica a Clínica Bel Viso?',
 			'a_text' => $faq_localizacao . ' Para orientações e localização atualizada, fale com a equipe pelo WhatsApp.',
 			'a_html' => '<p>' . htmlspecialchars($faq_localizacao, ENT_QUOTES, 'UTF-8') . '</p><p>Para orientações e localização atualizada, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
@@ -509,14 +523,36 @@ echo"
 			];
 		}, $faq_items),
 	];
+
+	$local_business_schema = [
+		'@context' => 'https://schema.org',
+		'@type' => 'Dentist',
+		'name' => 'Clínica Bel Viso',
+		'url' => 'https://clinicabelviso.com.br/',
+		'description' => $meta_description,
+		'address' => [
+			'@type' => 'PostalAddress',
+			'streetAddress' => $faq_address ?: 'Orion Business & Health Complex',
+			'addressLocality' => $faq_city,
+			'addressRegion' => $faq_state,
+			'postalCode' => $cep ?: '',
+			'addressCountry' => 'BR',
+		],
+		'areaServed' => $faq_city,
+		'medicalSpecialty' => ['Odontologia', 'Odontologia estética', 'Estética facial'],
+	];
+	if (!empty($telefone1)) {
+		$local_business_schema['telephone'] = $telefone1;
+	}
 	?>
 
 	<script type="application/ld+json"><?php echo json_encode($faq_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
+	<script type="application/ld+json"><?php echo json_encode($local_business_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 
 	<section id="faq-section" class="faq-section theme-bg-light-gradient py-5">
 		<div class="container py-5">
 			<h2 class="section-heading mb-3">Perguntas frequentes</h2>
-			<p class="mb-4">Confira respostas rápidas sobre agendamento, localização e atendimentos. Se preferir, fale com a equipe pelo WhatsApp.</p>
+			<p class="mb-4">Confira respostas rápidas sobre a Clínica Bel Viso, odontologia estética em <?php echo htmlspecialchars($faq_city, ENT_QUOTES, 'UTF-8'); ?>, agendamento e localização. Se preferir, fale com a equipe pelo WhatsApp.</p>
 
 			<div id="faqAccordion" class="accordion">
 				<?php foreach ($faq_items as $idx => $item): $i = $idx + 1; $isOpen = ($i === 1); ?>
