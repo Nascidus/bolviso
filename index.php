@@ -261,15 +261,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						    Clínica Bel Viso: Especialistas em Estética,<br> Odontologia e Bem-estar em <?php echo htmlspecialchars($seo_city, ENT_QUOTES, 'UTF-8'); ?>!
 					    </h1><!--//headline-->
 						<p>Odontologia estética e cuidado integral com sua saúde bucal e autoestima</p>
-					    <div class="subheadline mb-4">
-						<?php echo"$texto_institucional";?>						    
-					    </div><!--//subheading-->
-					    
-					    <div class="cta-holder row gx-md-3 gy-3 gy-md-0">
+					    <div class="cta-holder row gx-md-3 gy-3 gy-md-0 mb-4">
 						    <div class="col-12 col-md-auto">
 						        <a class="btn btn-primary w-100" href="<?php echo"$whatsapp_link";?>">Vamos agendar sua avaliação!!</a>
 						    </div>
 					    </div><!--//cta-holder-->
+					    <div class="subheadline mb-4">
+						<?php echo"$texto_institucional";?>						    
+					    </div><!--//subheading-->
 					    
 
 				    </div><!--//promo-->
@@ -345,11 +344,11 @@ echo"
 							<div class=\"carousel-item $active_class\">
 		
 								<a href=\"$whatsapp_link\">
-									<img id=\"sliddesktop\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\" loading=\"$img_loading\" decoding=\"async\" fetchpriority=\"$img_fetchpriority\">
+									<img class=\"slide-desktop w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\" loading=\"$img_loading\" decoding=\"async\" fetchpriority=\"$img_fetchpriority\">
 								</a>
 		
 								<a href=\"$whatsapp_link\">
-									<img id=\"slidmobile\" class=\"w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\" loading=\"$img_loading\" decoding=\"async\" fetchpriority=\"$img_fetchpriority\">
+									<img class=\"slide-mobile w-100\" src=\"img2/banner/$imagem\" alt=\"Slide $posicao\" width=\"100%\" loading=\"$img_loading\" decoding=\"async\" fetchpriority=\"$img_fetchpriority\">
 								</a>
 							</div>
 "; 		}
@@ -430,225 +429,6 @@ echo"
 		    </div><!--//row-->
 	    </div><!--//container-->
     </section><!--//benefits-section-->
-    
- 
-	<?php
-	// ============================================================
-	// SEO: Conteúdo + Palavras-chave (FAQ) + Schema.org FAQPage
-	// ============================================================
-	$faq_city = !empty($cidade) ? $cidade : 'Goiânia';
-	$faq_state = !empty($estado) ? $estado : 'GO';
-	$faq_address = trim((string)($endereco ?? ''));
-	$faq_location_line = !empty($faq_address) ? ($faq_address . ' - ' . $faq_city . '/' . $faq_state) : ($faq_city . '/' . $faq_state);
-	$faq_whatsapp = !empty($whatsapp_link) ? $whatsapp_link : '#';
-	$faq_localizacao = 'Estamos localizados no maior complexo de saúde em Goiânia, o Orion Business & Health Complex.';
-	if (!empty($faq_address)) {
-		$faq_localizacao .= ' Em ' . $faq_location_line . '.';
-	}
-
-	$faq_items = [
-		[
-			'q' => 'A Clínica Bel Viso faz odontologia estética em ' . $faq_city . '?',
-			'a_text' => 'Sim. A Clínica Bel Viso atua com odontologia estética em ' . $faq_city . ', oferecendo tratamentos como lentes de contato dental, clareamento, implantes, próteses e harmonização do sorriso, além de procedimentos de estética facial.',
-			'a_html' => '<p>Sim. A <strong>Clínica Bel Viso</strong> atua com <strong>odontologia estética em ' . htmlspecialchars($faq_city, ENT_QUOTES, 'UTF-8') . '</strong>, oferecendo tratamentos como:</p><ul><li><strong>Lentes de contato dental</strong></li><li><strong>Clareamento</strong></li><li><strong>Implantes e próteses</strong></li><li><strong>Harmonização do sorriso</strong></li><li><strong>Estética facial</strong></li></ul><p>Na avaliação, a equipe indica o melhor plano para o seu objetivo.</p>',
-		],
-		[
-			'q' => 'Onde fica a Clínica Bel Viso?',
-			'a_text' => $faq_localizacao . ' Para orientações e localização atualizada, fale com a equipe pelo WhatsApp.',
-			'a_html' => '<p>' . htmlspecialchars($faq_localizacao, ENT_QUOTES, 'UTF-8') . '</p><p>Para orientações e localização atualizada, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
-		],
-		[
-			'q' => 'Como agendar uma avaliação?',
-			'a_text' => 'Você pode agendar sua avaliação pelo WhatsApp. Envie seu nome e o tratamento de interesse (ex.: lentes de contato dental, clareamento, bioestimulador, toxina botulínica) e a equipe orienta os horários disponíveis.',
-			'a_html' => '<p>Você pode agendar sua avaliação pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p><p>Envie seu nome e o tratamento de interesse (ex.: <strong>lentes de contato dental</strong>, <strong>clareamento</strong>, <strong>bioestimulador</strong>, <strong>toxina botulínica</strong>) e a equipe orienta os horários disponíveis.</p>',
-		],
-		[
-			'q' => 'Quais tratamentos de Estética facial a clínica realiza?',
-			'a_text' => 'Atuamos com procedimentos como bioestimulador de colágeno (Sculptra/ácido polilático e hidroxiapatita), preenchimentos faciais com ácido hialurônico, fios de sustentação (PDO), ultrassom microfocado, toxina botulínica e peelings Line Skin (Hard, Aging, Melan).',
-			'a_html' => '<p>Atuamos com procedimentos de <strong>Estética facial</strong> como:</p><ul><li><strong>Bioestimulador de colágeno</strong> (ex.: ácido polilático/Sculptra e hidroxiapatita de cálcio)</li><li><strong>Preenchimentos faciais</strong> com ácido hialurônico (malar, olheiras, mandíbula, lábios, etc.)</li><li><strong>Fios de sustentação</strong> (PDO)</li><li><strong>Ultrassom microfocado</strong></li><li><strong>Toxina botulínica</strong></li><li><strong>Peelings Line Skin</strong> (Hard, Aging e Melan)</li></ul><p>Na avaliação, indicamos o melhor protocolo para seu objetivo.</p>',
-		],
-		[
-			'q' => 'Como funciona o clareamento dental? Quanto tempo leva?',
-			'a_text' => 'O clareamento dental costuma levar cerca de 21 dias (podendo variar). O clareamento combinado (em casa + consultório) pode potencializar o resultado, trazendo um sorriso mais branco com estabilidade de cor.',
-			'a_html' => '<p>O <strong>clareamento dental</strong> costuma levar cerca de <strong>21 dias</strong> (podendo variar de acordo com a técnica e o caso).</p><p>O clareamento <strong>combinado</strong> (em casa + consultório) pode potencializar o resultado: o consultório traz resultado mais rápido e o caseiro ajuda na estabilidade e durabilidade da cor.</p>',
-		],
-		[
-			'q' => 'Como funciona o tratamento com lentes de contato dental?',
-			'a_text' => 'Lentes de contato dental são lâminas finas de cerâmica que podem mudar tamanho, formato e cor dos dentes. O processo inclui planejamento, escaneamento intraoral, fotos, desenho 3D e teste virtual antes da finalização.',
-			'a_html' => '<p><strong>Lentes de contato dental</strong> são lâminas finas de cerâmica que podem transformar o sorriso, ajustando tamanho, formato e cor dos dentes.</p><p>O processo envolve planejamento com <strong>scanner intra-oral</strong>, fotos, <strong>desenho 3D</strong> e teste virtual antes da finalização — e você participa da escolha de formato e cor.</p>',
-		],
-		[
-			'q' => 'Como funcionam os implantes dentários?',
-			'a_text' => 'Implantes dentários são pinos de titânio biocompatíveis que se integram ao osso para substituir dentes perdidos. A prótese é a parte visível. Em alguns casos, podem ser necessários enxertos ósseos e/ou gengivais para o sucesso do tratamento.',
-			'a_html' => '<p><strong>Implantes dentários</strong> são pinos de titânio biocompatíveis que se integram ao osso para substituir dentes perdidos.</p><p>A prótese é a parte visível e pode devolver função e estética. Em alguns casos, podem ser necessários <strong>enxertos ósseos</strong> e/ou <strong>gengivais</strong> para o sucesso do tratamento.</p>',
-		],
-		[
-			'q' => 'O que é cirurgia gengival e quando é indicada?',
-			'a_text' => 'A cirurgia gengival (periodontia) remove excesso de tecido e melhora a harmonia do sorriso, podendo reduzir a exposição gengival. Pode ser indicada isoladamente ou combinada com lentes de contato dental, conforme avaliação.',
-			'a_html' => '<p>A <strong>cirurgia gengival</strong> (periodontia) remove excesso de tecido e melhora a harmonia do sorriso, podendo reduzir a exposição gengival.</p><p>Pode ser indicada isoladamente ou combinada com <strong>lentes de contato dental</strong>, conforme avaliação.</p>',
-		],
-		[
-			'q' => 'Quais tipos de prótese dentária existem?',
-			'a_text' => 'A prótese dentária pode ser fixa ou removível e pode substituir dentes/tecidos perdidos. Pode ser feita em resina acrílica (temporárias) ou cerâmica/porcelana (permanentes), apoiada em dentes, implantes ou mucosa, conforme o caso.',
-			'a_html' => '<p>A <strong>prótese dentária</strong> pode ser <strong>fixa</strong> ou <strong>removível</strong> e substitui dentes/tecidos perdidos.</p><p>Pode ser feita em <strong>resina acrílica</strong> (temporárias) ou <strong>cerâmica/porcelana</strong> (permanentes), apoiada em dentes, implantes ou mucosa, conforme o caso.</p>',
-		],
-		[
-			'q' => 'A clínica atende convênios?',
-			'a_text' => 'Para informações atualizadas sobre convênios, formas de pagamento e condições, entre em contato com a equipe pelo WhatsApp.',
-			'a_html' => '<p>Para informações atualizadas sobre <strong>convênios</strong>, formas de pagamento e condições, entre em contato com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
-		],
-		[
-			'q' => 'Como funciona a primeira avaliação?',
-			'a_text' => 'Na primeira avaliação, a equipe entende sua necessidade, analisa o caso e recomenda as opções de tratamento. Quando necessário, são solicitados exames e definido um plano de cuidado.',
-			'a_html' => '<p>Na primeira avaliação, a equipe entende sua necessidade, analisa o caso e recomenda as opções de tratamento.</p><p>Quando necessário, são solicitados exames e definido um plano de cuidado.</p>',
-		],
-		[
-			'q' => 'Qual é o horário de atendimento?',
-			'a_text' => 'Os horários podem variar. Para confirmar horários disponíveis e agendar, fale com a equipe pelo WhatsApp.',
-			'a_html' => '<p>Os horários podem variar.</p><p>Para confirmar horários disponíveis e agendar, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
-		],
-	];
-
-	$faq_schema = [
-		'@context' => 'https://schema.org',
-		'@type' => 'FAQPage',
-		'mainEntity' => array_map(function ($item) {
-			return [
-				'@type' => 'Question',
-				'name' => $item['q'],
-				'acceptedAnswer' => [
-					'@type' => 'Answer',
-					'text' => $item['a_text'],
-				],
-			];
-		}, $faq_items),
-	];
-
-	$local_business_schema = [
-		'@context' => 'https://schema.org',
-		'@type' => 'Dentist',
-		'name' => 'Clínica Bel Viso',
-		'url' => 'https://clinicabelviso.com.br/',
-		'description' => $meta_description,
-		'address' => [
-			'@type' => 'PostalAddress',
-			'streetAddress' => $faq_address ?: 'Orion Business & Health Complex',
-			'addressLocality' => $faq_city,
-			'addressRegion' => $faq_state,
-			'postalCode' => $cep ?: '',
-			'addressCountry' => 'BR',
-		],
-		'areaServed' => $faq_city,
-		'medicalSpecialty' => ['Odontologia', 'Odontologia estética', 'Estética facial'],
-	];
-	if (!empty($telefone1)) {
-		$local_business_schema['telephone'] = $telefone1;
-	}
-	?>
-
-	<script type="application/ld+json"><?php echo json_encode($faq_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
-	<script type="application/ld+json"><?php echo json_encode($local_business_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
-
-	<section id="faq-section" class="faq-section theme-bg-light-gradient py-5">
-		<div class="container py-5">
-			<h2 class="section-heading mb-3">Perguntas frequentes</h2>
-			<p class="mb-4">Confira respostas rápidas sobre a Clínica Bel Viso, odontologia estética em <?php echo htmlspecialchars($faq_city, ENT_QUOTES, 'UTF-8'); ?>, agendamento e localização. Se preferir, fale com a equipe pelo WhatsApp.</p>
-
-			<div id="faqAccordion" class="accordion">
-				<?php foreach ($faq_items as $idx => $item): $i = $idx + 1; $isOpen = ($i === 1); ?>
-					<div class="card faq-card">
-						<div class="card-header faq-card-header" id="faqHeading<?php echo $i; ?>">
-							<h3 class="mb-0 faq-question">
-								<button class="btn btn-link faq-toggle <?php echo $isOpen ? '' : 'collapsed'; ?>"
-									type="button"
-									data-toggle="collapse"
-									data-target="#faqCollapse<?php echo $i; ?>"
-									aria-expanded="<?php echo $isOpen ? 'true' : 'false'; ?>"
-									aria-controls="faqCollapse<?php echo $i; ?>">
-									<?php echo htmlspecialchars($item['q'], ENT_QUOTES, 'UTF-8'); ?>
-								</button>
-							</h3>
-						</div>
-
-						<div id="faqCollapse<?php echo $i; ?>"
-							class="collapse <?php echo $isOpen ? 'show' : ''; ?>"
-							aria-labelledby="faqHeading<?php echo $i; ?>"
-							data-parent="#faqAccordion">
-							<div class="card-body faq-card-body">
-								<?php echo $item['a_html']; ?>
-							</div>
-						</div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-		</div><!--//container-->
-	</section><!--//faq-section-->
-	
-	
-	
-<?php
-$acao = $_GET ['acao'] ?? '';
-if ($acao=='cadastrar' && $conn){
-
-$id = $_POST ['id'] ?? '';
-$nome = $_POST ['nome'] ?? '';
-$email = $_POST ['email'] ?? '';
-$data_cadastro = $_POST ['data_cadastro'] ?? '';
-$telefone = $_POST ['telefone'] ?? '';
-
-$diaatual = date('d');
-$mesatual = date('m');	
-$anoatual = date('Y');	
-
-$sql =" 
-INSERT INTO `newsletter` (`id`, `nome`, `email`, `data_cadastro` , `telefone`) 
-              VALUES (NULL, '$nome', '$email',  '$diaatual/$mesatual/$anoatual' , '$telefone');"; 
-
-if ($conn->query($sql) === TRUE) {  
-  
-  echo"<script language='javascript'>
-      function alerta(){alert('Obrigado! Em breve retornaremos.');}
-      alerta();
-      document.location='javascript:history.go(-1)';
-      </script>";
-  
-    }
-}?>
-
-
-    <section id="form-section" class="form-section">
-	    <div class="container">
-			<div class="row">
-				<div class="col-12 col-lg-3">
-					<h2>Quer receber<br> nosso contato?</h2>
-					<p>Preencha os campos que retornaremos!</p>
-				</div>
-
-				<div class="col-lg-9" style="padding-top: 35px;">
-				<form  action='index.php?acao=cadastrar' method='post' enctype='multipart/form-data' class="signup-form row g-2 align-items-center">
-	                    <div class="col-12 col-lg-3" style="padding: 0 20px 0 20px;">
-	                        <label for="nome">Seu Nome</label>
-	                        <input type="text" id="nome" name="nome" class="form-control me-md-1 semail" required>
-	                    </div>
-
-						<div class="col-12 col-lg-3" style="padding: 0 20px 0 20px;">
-	                        <label for="email">Seu melhor e-mail</label>
-	                        <input type="email" id="email" name="email" class="form-control me-md-1 semail">
-	                    </div>
-
-						<div class="col-12 col-lg-3" style="padding: 0 20px 0 20px;">
-	                        <label for="telefone">Seu Whastapp</label>
-	                        <input type="text" id="telefone" name="telefone" class="form-control me-md-1 semail" required>
-	                    </div>
-	                    <div class="col-12 col-lg-3" style="padding: 0 30px 0 30px;">
-	                        <button type="submit" class="btn btn-primary btn-submit  botao">Enviar</button>
-	                    </div>
-	                </form><!--//signup-form-->
-				</div>
-			</div>
-
-	    </div><!--//container-->
-    </section><!--//form-section-->
     
     <section id="reviews-section" class="reviews-section py-5">
 	    <div class="container">
@@ -733,10 +513,206 @@ foreach ($google_reviews as $rev):
 
 	    </div><!--//container-->
     </section><!--//reviews-section-->
-    
 
-    
-    
+	<?php
+	// ============================================================
+	// SEO: Conteúdo + Palavras-chave (FAQ) + Schema.org FAQPage
+	// ============================================================
+	$faq_city = !empty($cidade) ? $cidade : 'Goiânia';
+	$faq_state = !empty($estado) ? $estado : 'GO';
+	$faq_address = trim((string)($endereco ?? ''));
+	$faq_location_line = !empty($faq_address) ? ($faq_address . ' - ' . $faq_city . '/' . $faq_state) : ($faq_city . '/' . $faq_state);
+	$faq_whatsapp = !empty($whatsapp_link) ? $whatsapp_link : '#';
+	$faq_localizacao = 'Estamos localizados no maior complexo de saúde em Goiânia, o Orion Business & Health Complex.';
+	if (!empty($faq_address)) {
+		$faq_localizacao .= ' Em ' . $faq_location_line . '.';
+	}
+
+	$faq_items = [
+		[
+			'q' => 'A Clínica Bel Viso faz odontologia estética em ' . $faq_city . '?',
+			'a_text' => 'Sim. A Clínica Bel Viso atua com odontologia estética em ' . $faq_city . ', oferecendo tratamentos como lentes de contato dental, clareamento, implantes, próteses e harmonização do sorriso, além de procedimentos de estética facial.',
+			'a_html' => '<p>Sim. A <strong>Clínica Bel Viso</strong> atua com <strong>odontologia estética em ' . htmlspecialchars($faq_city, ENT_QUOTES, 'UTF-8') . '</strong>, oferecendo tratamentos como:</p><ul><li><strong>Lentes de contato dental</strong></li><li><strong>Clareamento</strong></li><li><strong>Implantes e próteses</strong></li><li><strong>Harmonização do sorriso</strong></li><li><strong>Estética facial</strong></li></ul><p>Na avaliação, a equipe indica o melhor plano para o seu objetivo.</p>',
+		],
+		[
+			'q' => 'Onde fica a Clínica Bel Viso?',
+			'a_text' => $faq_localizacao . ' Para orientações e localização atualizada, fale com a equipe pelo WhatsApp.',
+			'a_html' => '<p>' . htmlspecialchars($faq_localizacao, ENT_QUOTES, 'UTF-8') . '</p><p>Para orientações e localização atualizada, fale com a equipe pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p>',
+		],
+		[
+			'q' => 'Como agendar uma avaliação?',
+			'a_text' => 'Você pode agendar sua avaliação pelo WhatsApp. Envie seu nome e o tratamento de interesse (ex.: lentes de contato dental, clareamento, bioestimulador, toxina botulínica) e a equipe orienta os horários disponíveis.',
+			'a_html' => '<p>Você pode agendar sua avaliação pelo <a href="' . htmlspecialchars($faq_whatsapp, ENT_QUOTES, 'UTF-8') . '">WhatsApp</a>.</p><p>Envie seu nome e o tratamento de interesse (ex.: <strong>lentes de contato dental</strong>, <strong>clareamento</strong>, <strong>bioestimulador</strong>, <strong>toxina botulínica</strong>) e a equipe orienta os horários disponíveis.</p>',
+		],
+		[
+			'q' => 'Quais tratamentos de Estética facial a clínica realiza?',
+			'a_text' => 'Atuamos com procedimentos como bioestimulador de colágeno (Sculptra/ácido polilático e hidroxiapatita), preenchimentos faciais com ácido hialurônico, fios de sustentação (PDO), ultrassom microfocado, toxina botulínica e peelings Line Skin (Hard, Aging, Melan).',
+			'a_html' => '<p>Atuamos com procedimentos de <strong>Estética facial</strong> como:</p><ul><li><strong>Bioestimulador de colágeno</strong> (ex.: ácido polilático/Sculptra e hidroxiapatita de cálcio)</li><li><strong>Preenchimentos faciais</strong> com ácido hialurônico (malar, olheiras, mandíbula, lábios, etc.)</li><li><strong>Fios de sustentação</strong> (PDO)</li><li><strong>Ultrassom microfocado</strong></li><li><strong>Toxina botulínica</strong></li><li><strong>Peelings Line Skin</strong> (Hard, Aging e Melan)</li></ul><p>Na avaliação, indicamos o melhor protocolo para seu objetivo.</p>',
+		],
+		[
+			'q' => 'Como funciona o clareamento dental? Quanto tempo leva?',
+			'a_text' => 'O clareamento dental costuma levar cerca de 21 dias (podendo variar). O clareamento combinado (em casa + consultório) pode potencializar o resultado, trazendo um sorriso mais branco com estabilidade de cor.',
+			'a_html' => '<p>O <strong>clareamento dental</strong> costuma levar cerca de <strong>21 dias</strong> (podendo variar de acordo com a técnica e o caso).</p><p>O clareamento <strong>combinado</strong> (em casa + consultório) pode potencializar o resultado: o consultório traz resultado mais rápido e o caseiro ajuda na estabilidade e durabilidade da cor.</p>',
+		],
+		[
+			'q' => 'Como funciona o tratamento com lentes de contato dental?',
+			'a_text' => 'Lentes de contato dental são lâminas finas de cerâmica que podem mudar tamanho, formato e cor dos dentes. O processo inclui planejamento, escaneamento intraoral, fotos, desenho 3D e teste virtual antes da finalização.',
+			'a_html' => '<p><strong>Lentes de contato dental</strong> são lâminas finas de cerâmica que podem transformar o sorriso, ajustando tamanho, formato e cor dos dentes.</p><p>O processo envolve planejamento com <strong>scanner intra-oral</strong>, fotos, <strong>desenho 3D</strong> e teste virtual antes da finalização — e você participa da escolha de formato e cor.</p>',
+		],
+		[
+			'q' => 'Como funcionam os implantes dentários?',
+			'a_text' => 'Implantes dentários são pinos de titânio biocompatíveis que se integram ao osso para substituir dentes perdidos. A prótese é a parte visível. Em alguns casos, podem ser necessários enxertos ósseos e/ou gengivais para o sucesso do tratamento.',
+			'a_html' => '<p><strong>Implantes dentários</strong> são pinos de titânio biocompatíveis que se integram ao osso para substituir dentes perdidos.</p><p>A prótese é a parte visível e pode devolver função e estética. Em alguns casos, podem ser necessários <strong>enxertos ósseos</strong> e/ou <strong>gengivais</strong> para o sucesso do tratamento.</p>',
+		],
+		[
+			'q' => 'O que é cirurgia gengival e quando é indicada?',
+			'a_text' => 'A cirurgia gengival (periodontia) remove excesso de tecido e melhora a harmonia do sorriso, podendo reduzir a exposição gengival. Pode ser indicada isoladamente ou combinada com lentes de contato dental, conforme avaliação.',
+			'a_html' => '<p>A <strong>cirurgia gengival</strong> (periodontia) remove excesso de tecido e melhora a harmonia do sorriso, podendo reduzir a exposição gengival.</p><p>Pode ser indicada isoladamente ou combinada com <strong>lentes de contato dental</strong>, conforme avaliação.</p>',
+		],
+		[
+			'q' => 'Quais tipos de prótese dentária existem?',
+			'a_text' => 'A prótese dentária pode ser fixa ou removível e pode substituir dentes/tecidos perdidos. Pode ser feita em resina acrílica (temporárias) ou cerâmica/porcelana (permanentes), apoiada em dentes, implantes ou mucosa, conforme o caso.',
+			'a_html' => '<p>A <strong>prótese dentária</strong> pode ser <strong>fixa</strong> ou <strong>removível</strong> e substitui dentes/tecidos perdidos.</p><p>Pode ser feita em <strong>resina acrílica</strong> (temporárias) ou <strong>cerâmica/porcelana</strong> (permanentes), apoiada em dentes, implantes ou mucosa, conforme o caso.</p>',
+		],
+	];
+
+	$faq_schema = [
+		'@context' => 'https://schema.org',
+		'@type' => 'FAQPage',
+		'mainEntity' => array_map(function ($item) {
+			return [
+				'@type' => 'Question',
+				'name' => $item['q'],
+				'acceptedAnswer' => [
+					'@type' => 'Answer',
+					'text' => $item['a_text'],
+				],
+			];
+		}, $faq_items),
+	];
+
+	$local_business_schema = [
+		'@context' => 'https://schema.org',
+		'@type' => 'Dentist',
+		'name' => 'Clínica Bel Viso',
+		'url' => 'https://clinicabelviso.com.br/',
+		'description' => $meta_description,
+		'address' => [
+			'@type' => 'PostalAddress',
+			'streetAddress' => $faq_address ?: 'Orion Business & Health Complex',
+			'addressLocality' => $faq_city,
+			'addressRegion' => $faq_state,
+			'postalCode' => $cep ?: '',
+			'addressCountry' => 'BR',
+		],
+		'areaServed' => $faq_city,
+		'medicalSpecialty' => ['Odontologia', 'Odontologia estética', 'Estética facial'],
+	];
+	if (!empty($telefone1)) {
+		$local_business_schema['telephone'] = $telefone1;
+	}
+	?>
+
+	<script type="application/ld+json"><?php echo json_encode($faq_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
+	<script type="application/ld+json"><?php echo json_encode($local_business_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
+
+	<section id="faq-section" class="faq-section theme-bg-light-gradient py-5">
+		<div class="container py-5">
+			<h2 class="section-heading mb-3">Perguntas frequentes</h2>
+			<p class="mb-4">Confira respostas rápidas sobre a Clínica Bel Viso, odontologia estética em <?php echo htmlspecialchars($faq_city, ENT_QUOTES, 'UTF-8'); ?>, agendamento e localização. Se preferir, fale com a equipe pelo WhatsApp.</p>
+
+			<div id="faqAccordion" class="accordion">
+				<?php foreach ($faq_items as $idx => $item): $i = $idx + 1; $isOpen = ($i === 1); ?>
+					<div class="card faq-card">
+						<div class="card-header faq-card-header" id="faqHeading<?php echo $i; ?>">
+							<h3 class="mb-0 faq-question">
+								<button class="btn btn-link faq-toggle <?php echo $isOpen ? '' : 'collapsed'; ?>"
+									type="button"
+									data-toggle="collapse"
+									data-target="#faqCollapse<?php echo $i; ?>"
+									aria-expanded="<?php echo $isOpen ? 'true' : 'false'; ?>"
+									aria-controls="faqCollapse<?php echo $i; ?>">
+									<?php echo htmlspecialchars($item['q'], ENT_QUOTES, 'UTF-8'); ?>
+								</button>
+							</h3>
+						</div>
+
+						<div id="faqCollapse<?php echo $i; ?>"
+							class="collapse <?php echo $isOpen ? 'show' : ''; ?>"
+							aria-labelledby="faqHeading<?php echo $i; ?>"
+							data-parent="#faqAccordion">
+							<div class="card-body faq-card-body">
+								<?php echo $item['a_html']; ?>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div><!--//container-->
+	</section><!--//faq-section-->
+
+<?php
+$acao = $_GET ['acao'] ?? '';
+if ($acao=='cadastrar' && $conn){
+
+$id = $_POST ['id'] ?? '';
+$nome = $_POST ['nome'] ?? '';
+$email = $_POST ['email'] ?? '';
+$data_cadastro = $_POST ['data_cadastro'] ?? '';
+$telefone = $_POST ['telefone'] ?? '';
+
+$diaatual = date('d');
+$mesatual = date('m');	
+$anoatual = date('Y');	
+
+$sql =" 
+INSERT INTO `newsletter` (`id`, `nome`, `email`, `data_cadastro` , `telefone`) 
+              VALUES (NULL, '$nome', '$email',  '$diaatual/$mesatual/$anoatual' , '$telefone');"; 
+
+if ($conn->query($sql) === TRUE) {  
+  
+  echo"<script language='javascript'>
+      function alerta(){alert('Obrigado! Em breve retornaremos.');}
+      alerta();
+      document.location='javascript:history.go(-1)';
+      </script>";
+  
+    }
+}?>
+
+    <section id="form-section" class="form-section">
+	    <div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-3">
+					<h2 class="section-heading">Quer receber<br> nosso contato?</h2>
+					<p>Preencha os campos que retornaremos!</p>
+				</div>
+
+				<div class="col-lg-9" style="padding-top: 35px;">
+				<form  action='index.php?acao=cadastrar' method='post' enctype='multipart/form-data' class="signup-form row g-2 align-items-center">
+	                    <div class="col-12 col-lg-3" style="padding: 0 20px 0 20px;">
+	                        <label for="nome">Seu Nome</label>
+	                        <input type="text" id="nome" name="nome" class="form-control me-md-1 semail" required>
+	                    </div>
+
+						<div class="col-12 col-lg-3" style="padding: 0 20px 0 20px;">
+	                        <label for="email">Seu melhor e-mail</label>
+	                        <input type="email" id="email" name="email" class="form-control me-md-1 semail">
+	                    </div>
+
+						<div class="col-12 col-lg-3" style="padding: 0 20px 0 20px;">
+	                        <label for="telefone">Seu Whastapp</label>
+	                        <input type="text" id="telefone" name="telefone" class="form-control me-md-1 semail" required>
+	                    </div>
+	                    <div class="col-12 col-lg-3" style="padding: 0 30px 0 30px;">
+	                        <button type="submit" class="btn btn-primary btn-submit  botao">Enviar</button>
+	                    </div>
+	                </form><!--//signup-form-->
+				</div>
+			</div>
+
+	    </div><!--//container-->
+    </section><!--//form-section-->
 
     <footer class="footer">
 		<div class="container">
@@ -747,9 +723,9 @@ foreach ($google_reviews as $rev):
 						<li><a href="#servicos">Serviços</a></li>
 						<li><a href="#antesdepois">Resultados (Antes e Depois)</a></li>
 						<li><a href="#benefits-section">Outros Tratamentos</a></li>
+						<li><a href="#reviews-section">Depoimentos</a></li>
 						<li><a href="#faq-section">Perguntas frequentes</a></li>
 						<li><a href="#form-section">Contato</a></li>
-						<li><a href="#reviews-section">Depoimentos</a></li>
 					</ul>
 				</div>
 
