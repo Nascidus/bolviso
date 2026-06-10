@@ -752,8 +752,16 @@ if ($conn->query($sql) === TRUE) {
 						<?php if (!empty($cidade) || !empty($estado)): ?>
 							<div class="footer-line"><?php echo htmlspecialchars(trim(($cidade ?? '') . (empty($estado) ? '' : ' / ' . $estado)), ENT_QUOTES, 'UTF-8'); ?></div>
 						<?php endif; ?>
-						<?php if (!empty($telefone1) || !empty($telefone2)): ?>
-							<div class="footer-line"><?php echo htmlspecialchars(trim(($telefone1 ?? '') . (empty($telefone2) ? '' : ' | ' . $telefone2)), ENT_QUOTES, 'UTF-8'); ?></div>
+						<?php
+						$footer_phones = [];
+						foreach ([$telefone1 ?? '', $telefone2 ?? ''] as $phone) {
+							$phone = trim((string) $phone);
+							if ($phone !== '' && !in_array($phone, $footer_phones, true)) {
+								$footer_phones[] = $phone;
+							}
+						}
+						if (!empty($footer_phones)): ?>
+							<div class="footer-line"><?php echo htmlspecialchars(implode(' | ', $footer_phones), ENT_QUOTES, 'UTF-8'); ?></div>
 						<?php endif; ?>
 					</div>
 				</div>
